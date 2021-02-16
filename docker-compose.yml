@@ -1,0 +1,14 @@
+version: '3'
+
+services: 
+    api: 
+        image: php:7.4-apache
+        build: .
+        container_name: phpSymfony
+        environment: 
+            - APACHE_DOCUMENT_ROOT=/var/www/html/public
+        ports: 
+            - "9090:80"
+        volumes:
+            - ./MoviesBackend:/var/www/html 
+            - ./config/vhost.conf:/etc/apache2/sites-available/000-default.conf    
