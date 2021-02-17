@@ -5,10 +5,10 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     && docker-php-ext-install zip pdo_mysql mysqli  \
     && a2enmod rewrite headers
 
-COPY . /var/www/html
+COPY ./MoviesBackend /var/www/html/
 
 EXPOSE 80
 
-WORKDIR /var/www/html/MoviesBackend
+WORKDIR /var/www/html/
 
 RUN composer install

@@ -10,7 +10,7 @@ services:
         ports: 
             - "9090:80"
         volumes:
-            - ./MoviesBackend:/var/www/html 
+            - ./MoviesBackend/:/var/www/html/ 
             - ./config/vhost.conf:/etc/apache2/sites-available/000-default.conf
     mysql:
         image: mysql:8.0
