@@ -11,4 +11,13 @@ services:
             - "9090:80"
         volumes:
             - ./MoviesBackend:/var/www/html 
-            - ./config/vhost.conf:/etc/apache2/sites-available/000-default.conf    
+            - ./config/vhost.conf:/etc/apache2/sites-available/000-default.conf
+    mysql:
+        image: mysql:8.0
+        container_name: mysqlSymfony
+        environment: 
+            MYSQL_DATABASE: movies
+            MYSQL_ROOT_PASSWORD: root
+        ports:
+            - "3306:3306"
+        restart: always
