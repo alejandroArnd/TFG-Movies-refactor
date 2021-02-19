@@ -17,7 +17,7 @@ class CreateMovie
 
     public function handle($movie): void
     {
-        $movie = new Movies($movie->title, $movie->overview, new DateTime($movie->releaseDate), new DateTime($movie->duration));
+        $movie = new Movies($movie->title, $movie->overview, new DateTime($movie->releaseDate), $movie->duration);
         $this->moviesRepository->save($movie);
     }
 }

@@ -23,7 +23,7 @@ class FindAllMovies
                 $movie->getTitle(), 
                 $movie->getOverview(), 
                 $movie->getReleaseDate()->format('Y-m-d'), 
-                $movie->getDuration()->format('H:i:s')
+                $movie->getDuration()
             ];
         }
         return $moviesJson;

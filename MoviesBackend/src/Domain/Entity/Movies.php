@@ -33,11 +33,11 @@ class Movies
     private $releaseDate;
 
     /**
-     * @ORM\Column(type="time")
+     * @ORM\Column(type="integer")
      */
     private $duration;
 
-    public function __construct(string $title, string $overview, DateTime $releaseDate, DateTime $duration)
+    public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration)
     {
         $this->title = $title;
         $this->overview = $overview;
@@ -80,12 +80,12 @@ class Movies
         $this->releaseDate = $releaseDate;
     }
 
-    public function getDuration(): ?DateTime
+    public function getDuration(): ?int
     {
         return $this->duration;
     }
 
-    public function setDuration(DateTime $duration): void
+    public function setDuration(int $duration): void
     {
         $this->duration = $duration;
     }
