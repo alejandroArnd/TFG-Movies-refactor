@@ -3,6 +3,7 @@
 namespace App\Domain\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use DateTime;
 
 /**
  * @ORM\Entity
@@ -36,6 +37,14 @@ class Movies
      */
     private $duration;
 
+    public function __construct(string $title, string $overview, DateTime $releaseDate, DateTime $duration)
+    {
+        $this->title = $title;
+        $this->overview = $overview;
+        $this->releaseDate = $releaseDate;
+        $this->duration = $duration;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -61,22 +70,22 @@ class Movies
         $this->overview = $overview;
     }
 
-    public function getReleaseDate(): ?\DateTimeInterface
+    public function getReleaseDate(): ?DateTime
     {
         return $this->releaseDate;
     }
 
-    public function setReleaseDate(\DateTimeInterface $releaseDate): void
+    public function setReleaseDate(DateTime $releaseDate): void
     {
         $this->releaseDate = $releaseDate;
     }
 
-    public function getDuration(): ?\DateTimeInterface
+    public function getDuration(): ?DateTime
     {
         return $this->duration;
     }
 
-    public function setDuration(\DateTimeInterface $duration): void
+    public function setDuration(DateTime $duration): void
     {
         $this->duration = $duration;
     }

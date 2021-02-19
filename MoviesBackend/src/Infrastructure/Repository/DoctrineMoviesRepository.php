@@ -19,4 +19,10 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
         return $this->findAll();
     }
 
+    public function save(Movies $movies):void
+    {
+        $this->getEntityManager()->persist($movies);
+        $this->getEntityManager()->flush();
+    }
+
 }
