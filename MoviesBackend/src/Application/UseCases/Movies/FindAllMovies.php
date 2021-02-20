@@ -19,11 +19,11 @@ class FindAllMovies
         $movies = $this->moviesRepository->getAll();
         foreach($movies as $movie){
             $moviesJson[] = [
-                $movie->getId(), 
-                $movie->getTitle(), 
-                $movie->getOverview(), 
-                $movie->getReleaseDate()->format('Y-m-d'), 
-                $movie->getDuration()
+               'id' => $movie->getId(), 
+               'title' => $movie->getTitle(), 
+               'overview' => $movie->getOverview(), 
+               'releaseDate' => $movie->getReleaseDate()->format('Y-m-d'), 
+               'duration' => $movie->getDuration(),
             ];
         }
         return $moviesJson;
