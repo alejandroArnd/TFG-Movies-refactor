@@ -9,18 +9,25 @@ use App\Application\UseCases\Movies\CreateMovie;
 use App\Application\Service\ValidatorMovieService;
 use App\Application\UseCases\Movies\FindAllMovies;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use App\Application\UseCases\Movies\SoftDeleteMovie;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MoviesController extends AbstractController{
 
     private FindAllMovies $findAllMovies;
     private CreateMovie $createMovie;
+    private SoftDeleteMovie $softDeteleMovie;
     private ValidatorMovieService $validatorMovie;
 
-    public function __construct(FindAllMovies $findAllMovies, CreateMovie $createMovie, ValidatorMovieService $validatorMovie)
-    {
+    public function __construct(
+        FindAllMovies $findAllMovies, 
+        CreateMovie $createMovie, 
+        SoftDeleteMovie $softDeteleMovie, 
+        ValidatorMovieService $validatorMovie
+    ){
         $this->findAllMovies = $findAllMovies;
         $this->createMovie = $createMovie;
+        $this->softDeteleMovie = $softDeteleMovie;
         $this->validatorMovie = $validatorMovie;
     }
 
@@ -49,4 +56,16 @@ class MoviesController extends AbstractController{
         }
     }
 
+     /**
+     * @Route("/movies/{id}", methods={"DELETE"})
+     */
+    public function delete(int $id): JsonResponse
+    {
+        try{
+            $this->softDeteleMovie->handle($id);
+            return new JsonResponse("Movie was deleted", JsonResponse::HTTP_OK);
+        }catch(Exception $exception){
+            return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_NOT_FOUND);
+        }
+    }
 }
