@@ -37,12 +37,18 @@ class Movies
      */
     private $duration;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isDeleted;
+
     public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration)
     {
         $this->title = $title;
         $this->overview = $overview;
         $this->releaseDate = $releaseDate;
         $this->duration = $duration;
+        $this->isDeleted = false;
     }
 
     public function getId(): ?int
@@ -88,5 +94,15 @@ class Movies
     public function setDuration(int $duration): void
     {
         $this->duration = $duration;
+    }
+
+    public function getIsDeleted(): ?bool
+    {
+        return $this->isDeleted;
+    }
+
+    public function setIsDeleted(bool $isDeleted): void
+    {
+        $this->isDeleted = $isDeleted;
     }
 }
