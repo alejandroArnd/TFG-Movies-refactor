@@ -10,6 +10,7 @@ use App\Application\Service\ValidatorMovieService;
 use App\Application\UseCases\Movies\FindAllMovies;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Application\UseCases\Movies\SoftDeleteMovie;
+use App\Application\UseCases\Movies\FindMoviesByTitle;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MoviesController extends AbstractController{
@@ -18,16 +19,19 @@ class MoviesController extends AbstractController{
     private CreateMovie $createMovie;
     private SoftDeleteMovie $softDeteleMovie;
     private ValidatorMovieService $validatorMovie;
+    private FindMoviesByTitle $findMoviesByTitle;
 
     public function __construct(
         FindAllMovies $findAllMovies, 
         CreateMovie $createMovie, 
         SoftDeleteMovie $softDeteleMovie, 
+        findMoviesByTitle $findMoviesByTitle,
         ValidatorMovieService $validatorMovie
     ){
         $this->findAllMovies = $findAllMovies;
         $this->createMovie = $createMovie;
         $this->softDeteleMovie = $softDeteleMovie;
+        $this->findMoviesByTitle = $findMoviesByTitle;
         $this->validatorMovie = $validatorMovie;
     }
 
@@ -69,5 +73,14 @@ class MoviesController extends AbstractController{
         }
     }
 
+    
+     /**
+     * @Route("/api/movies/{title}", methods={"POST"})
+     */
+    public function findMoviesByTitle (Request $request, string $title): JsonResponse
+    {
+        $movies = $this->findMoviesByTitle->handle($title);
+        return new JsonResponse($movies, JsonResponse::HTTP_OK);
+    }
     
 }

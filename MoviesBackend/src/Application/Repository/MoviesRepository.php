@@ -12,4 +12,6 @@ interface MoviesRepository
     public function findById(int $id): ?Movies;
 
     public function findOneByTitle(string $title): ?Movies;
+
+    public function findByTitle(string $title): array;
 }

@@ -35,4 +35,13 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
         return $this->findOneBy(['title' => $title]);
     }
 
+    public function findByTitle(string $title): array
+    {
+        $queryBuilder = $this->createQueryBuilder('m');
+        return $queryBuilder->where($queryBuilder->expr()->like('m.title',':title'))
+                ->setParameter('title','%'.$title.'%')
+                ->getQuery()
+                ->getResult();
+    }
+
 }
