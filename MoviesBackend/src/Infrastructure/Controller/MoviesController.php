@@ -32,7 +32,7 @@ class MoviesController extends AbstractController{
     }
 
     /**
-     * @Route("/movies", methods={"GET"})
+     * @Route("/api/movies", methods={"GET"})
      */
     public function findAllMovies(): JsonResponse
     {
@@ -42,7 +42,7 @@ class MoviesController extends AbstractController{
     }
 
      /**
-     * @Route("/movies", methods={"POST"})
+     * @Route("/api/movies", methods={"POST"})
      */
     public function create(Request $request): JsonResponse
     {
@@ -57,7 +57,7 @@ class MoviesController extends AbstractController{
     }
 
      /**
-     * @Route("/movies/{id}", methods={"DELETE"})
+     * @Route("/api/movies/{id}", methods={"DELETE"})
      */
     public function delete(int $id): JsonResponse
     {
@@ -68,4 +68,6 @@ class MoviesController extends AbstractController{
             return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_NOT_FOUND);
         }
     }
+
+    
 }
