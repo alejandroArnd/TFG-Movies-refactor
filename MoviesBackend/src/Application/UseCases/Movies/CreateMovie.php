@@ -2,9 +2,10 @@
 
 namespace App\Application\UseCases\Movies;
 
+use DateTime;
 use App\Domain\Entity\Movies;
 use App\Application\Repository\MoviesRepository;
-use DateTime;
+use App\Domain\Exception\MovieAlreadyExistException;
 
 class CreateMovie
 {
@@ -17,6 +18,12 @@ class CreateMovie
 
     public function handle($movie): void
     {
+        $movieAlreadyExit = $this->moviesRepository->findOneByTitle($movie->title);
+
+        if($movieAlreadyExit){
+            throw new MovieAlreadyExistException();
+        }
+
         $movie = new Movies($movie->title, $movie->overview, new DateTime($movie->releaseDate), $movie->duration);
         $this->moviesRepository->save($movie);
     }

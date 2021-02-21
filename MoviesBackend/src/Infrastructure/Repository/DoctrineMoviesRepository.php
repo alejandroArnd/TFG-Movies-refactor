@@ -25,9 +25,14 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
         $this->getEntityManager()->flush();
     }
 
-    public function findById(int $id):Movies
+    public function findById(int $id): ?Movies
     {
         return $this->find($id);
+    }
+
+    public function findOneByTitle(string $title): ?Movies
+    {
+        return $this->findOneBy(['title' => $title]);
     }
 
 }
