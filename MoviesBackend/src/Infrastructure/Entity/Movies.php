@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Entity;
+namespace App\Infrastructure\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use DateTime;
@@ -42,13 +42,14 @@ class Movies
      */
     private $isDeleted;
 
-    public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration)
+    public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration,  int $id = null, bool $isDeleted = false)
     {
+        $this->id = $id;
         $this->title = $title;
         $this->overview = $overview;
         $this->releaseDate = $releaseDate;
         $this->duration = $duration;
-        $this->isDeleted = false;
+        $this->isDeleted = $isDeleted;
     }
 
     public function getId(): ?int
