@@ -3,7 +3,7 @@
 namespace App\Application\UseCases\Movies;
 
 use DateTime;
-use App\Domain\Entity\Movies;
+use App\Domain\Model\MoviesModel;
 use App\Application\Repository\MoviesRepository;
 use App\Domain\Exception\MovieAlreadyExistException;
 
@@ -24,7 +24,7 @@ class CreateMovie
             throw new MovieAlreadyExistException();
         }
 
-        $movie = new Movies($movie->title, $movie->overview, new DateTime($movie->releaseDate), $movie->duration);
+        $movie = new MoviesModel($movie->title, $movie->overview, new DateTime($movie->releaseDate), $movie->duration);
         $this->moviesRepository->save($movie);
     }
 }

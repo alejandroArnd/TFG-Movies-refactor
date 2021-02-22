@@ -2,16 +2,17 @@
 
 namespace App\Application\Repository;
 
-use App\Domain\Entity\Movies;
+use App\Domain\Model\MoviesModel;
+
 interface MoviesRepository
 {
-    public function save(Movies $movies): void;
+    public function save(MoviesModel $movie): void;
     
     public function getAll(): array;
 
-    public function findById(int $id): ?Movies;
+    public function findById(int $id): ?MoviesModel;
 
-    public function findOneByTitle(string $title): ?Movies;
+    public function findOneByTitle(string $title): ?MoviesModel;
 
     public function findByTitle(string $title): array;
 }
