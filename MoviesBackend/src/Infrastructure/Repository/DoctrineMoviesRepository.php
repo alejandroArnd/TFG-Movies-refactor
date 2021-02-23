@@ -25,7 +25,8 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
 
     public function save(MoviesModel $movie):void
     {
-        $this->getEntityManager()->persist($this->movieMapper->toEntity($movie));
+        $movieToSave = $movie->getId() ? $this->update($movie) : $this->movieMapper->toEntity($movie);
+        $this->getEntityManager()->persist($movieToSave);
         $this->getEntityManager()->flush();
     }
 
@@ -51,5 +52,19 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
 
         return $this->movieMapper->toArrayModel($movies);
     }
+
+    private function update($movieModel)
+    {
+        $movieFound = $this->find($movieModel->getId());
+        $movieFound->setTitle($movieModel->getTitle());
+        $movieFound->setOverview($movieModel->getOverview());
+        $movieFound->setReleaseDate($movieModel->getReleaseDate());
+        $movieFound->setDuration($movieModel->getDuration());
+        $movieFound->setIsDeleted($movieModel->getIsDeleted());
+        return $movieFound;
+    }
+
+
+    /// Crear un metodo PRIVADO que sea un update para setear todos los atributos del modelo en la entidad y luego en el metodo del save hacer una ternaria solo se queda en una ternaria el find pasa al metdo de update
 
 }
