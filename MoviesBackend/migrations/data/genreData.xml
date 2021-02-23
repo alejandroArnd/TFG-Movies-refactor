@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genres>
+    <genre name = "Action"></genre>
+    <genre name = "Adventure"></genre>
+    <genre name = "Animation"></genre>
+    <genre name = "Biography"></genre>
+    <genre name = "Comedy"></genre>
+    <genre name = "Crime"></genre>
+    <genre name = "Documentary"></genre>
+    <genre name = "Drama"></genre>
+    <genre name = "Family"></genre>
+    <genre name = "Experimental"></genre>
+    <genre name = "Fantasy"></genre>
+    <genre name = "History"></genre>
+    <genre name = "Horror"></genre>
+    <genre name = "Music"></genre>
+    <genre name = "Musical"></genre>
+    <genre name = "Mystery"></genre>
+    <genre name = "Romance"></genre>
+    <genre name = "Sci-Fi"></genre>
+    <genre name = "Sport"></genre>
+    <genre name = "Superhero"></genre>
+    <genre name = "Thriller"></genre>
+    <genre name = "War"></genre>
+    <genre name = "Western"></genre>
+</genres>
