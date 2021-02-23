@@ -6,6 +6,7 @@ use Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Application\UseCases\Movies\CreateMovie;
+use App\Application\UseCases\Movies\UpdateMovie;
 use App\Application\Service\ValidatorMovieService;
 use App\Application\UseCases\Movies\FindAllMovies;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -20,18 +21,21 @@ class MoviesController extends AbstractController{
     private SoftDeleteMovie $softDeteleMovie;
     private ValidatorMovieService $validatorMovie;
     private FindMoviesByTitle $findMoviesByTitle;
+    private UpdateMovie $updateMovie;
 
     public function __construct(
         FindAllMovies $findAllMovies, 
         CreateMovie $createMovie, 
         SoftDeleteMovie $softDeteleMovie, 
-        findMoviesByTitle $findMoviesByTitle,
+        FindMoviesByTitle $findMoviesByTitle,
+        UpdateMovie $updateMovie,
         ValidatorMovieService $validatorMovie
     ){
         $this->findAllMovies = $findAllMovies;
         $this->createMovie = $createMovie;
         $this->softDeteleMovie = $softDeteleMovie;
         $this->findMoviesByTitle = $findMoviesByTitle;
+        $this->updateMovie = $updateMovie;
         $this->validatorMovie = $validatorMovie;
     }
 
@@ -81,6 +85,21 @@ class MoviesController extends AbstractController{
     {
         $movies = $this->findMoviesByTitle->handle($title);
         return new JsonResponse($movies, JsonResponse::HTTP_OK);
+    }
+
+     /**
+     * @Route("/api/movies", methods={"PUT"})
+     */
+    public function update (Request $request): JsonResponse
+    {
+        try{
+            $movie = json_decode($request->getContent());
+            $this->validatorMovie->validate($movie);
+            $this->updateMovie->handle($movie);
+            return new JsonResponse("Movie was updated!", JsonResponse::HTTP_OK);
+        }catch(Exception $exception){
+            return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_BAD_REQUEST);
+        }
     }
     
 }
