@@ -63,8 +63,4 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
         $movieFound->setIsDeleted($movieModel->getIsDeleted());
         return $movieFound;
     }
-
-
-    /// Crear un metodo PRIVADO que sea un update para setear todos los atributos del modelo en la entidad y luego en el metodo del save hacer una ternaria solo se queda en una ternaria el find pasa al metdo de update
-
 }
