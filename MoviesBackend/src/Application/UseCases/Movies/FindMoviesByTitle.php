@@ -20,10 +20,6 @@ class FindMoviesByTitle
             $moviesJson[] = [
                'id' => $movie->getId(), 
                'title' => $movie->getTitle(), 
-               'overview' => $movie->getOverview(), 
-               'releaseDate' => $movie->getReleaseDate()->format('Y-m-d'), 
-               'duration' => $movie->getDuration(),
-               'isDeleted' => $movie->getIsDeleted()
             ];
         }
         return $moviesJson;
