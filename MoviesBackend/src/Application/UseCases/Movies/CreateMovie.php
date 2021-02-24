@@ -4,16 +4,20 @@ namespace App\Application\UseCases\Movies;
 
 use DateTime;
 use App\Domain\Model\MoviesModel;
+use App\Application\Repository\GenreRepository;
 use App\Application\Repository\MoviesRepository;
+use App\Domain\Exception\GenreNotFoundException;
 use App\Domain\Exception\MovieAlreadyExistException;
 
 class CreateMovie
 {
     private MoviesRepository $moviesRepository;
+    private GenreRepository $genreRepository;
 
-    public function __construct(MoviesRepository $moviesRepository)
+    public function __construct(MoviesRepository $moviesRepository, GenreRepository $genreRepository)
     {
         $this->moviesRepository = $moviesRepository;
+        $this->genreRepository = $genreRepository;
     }
 
     public function handle($movie): void
@@ -24,7 +28,20 @@ class CreateMovie
             throw new MovieAlreadyExistException();
         }
 
-        $movie = new MoviesModel($movie->title, $movie->overview, new DateTime($movie->releaseDate), $movie->duration);
-        $this->moviesRepository->save($movie);
+        $genres = [];
+
+        $newMovie = new MoviesModel($movie->title, $movie->overview, new DateTime($movie->releaseDate), $movie->duration);
+
+        foreach($movie->genres as $genre){
+            $genreFound = $this->genreRepository->findOneByName($genre);
+            
+            if(!$genreFound){
+                throw new GenreNotFoundException($genre);
+            }
+
+            $newMovie->addGenre($genreFound);
+        }
+
+        $this->moviesRepository->save($newMovie);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Domain\Model;
 
 use DateTime;
+use App\Domain\Model\GenreModel;
 
 class MoviesModel
 {
@@ -13,6 +14,7 @@ class MoviesModel
     private $releaseDate;
     private $duration;
     private $isDeleted;
+    private $genres;
 
     public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration, int $id = null, bool $isDeleted = false)
     {
@@ -22,6 +24,7 @@ class MoviesModel
         $this->releaseDate = $releaseDate;
         $this->duration = $duration;
         $this->isDeleted = $isDeleted;
+        $this->genres = [];
     }
 
     public function getId(): ?int
@@ -77,5 +80,17 @@ class MoviesModel
     public function setIsDeleted(bool $isDeleted): void
     {
         $this->isDeleted = $isDeleted;
+    }
+
+    public function getGenres(): array
+    {
+        return $this->genres;
+    }
+
+    public function addGenre(GenreModel $genre): void
+    {
+        if (!in_array($genre, $this->genres, true)) {
+            $this->genres[] = $genre;
+        }
     }
 }
