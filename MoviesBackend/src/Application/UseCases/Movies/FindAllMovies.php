@@ -18,13 +18,18 @@ class FindAllMovies
         $moviesJson;
         $movies = $this->moviesRepository->getAll();
         foreach($movies as $movie){
+            $genreJson = [];
+            foreach($movie->getGenres() as $genre){
+                $genreJson[] = ['id' => $genre->getId(), 'name' => $genre->getName()];
+            }
             $moviesJson[] = [
                'id' => $movie->getId(), 
                'title' => $movie->getTitle(), 
                'overview' => $movie->getOverview(), 
                'releaseDate' => $movie->getReleaseDate()->format('Y-m-d'), 
                'duration' => $movie->getDuration(),
-               'isDeleted' => $movie->getIsDeleted()
+               'isDeleted' => $movie->getIsDeleted(),
+               'genres' =>  $genreJson,
             ];
         }
         return $moviesJson;
