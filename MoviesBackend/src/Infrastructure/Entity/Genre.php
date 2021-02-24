@@ -2,6 +2,8 @@
 
 namespace App\Infrastructure\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -21,9 +23,16 @@ class Genre
      */
     private $name;
 
-    public function __construct(string $name)
+    /**
+     * @ORM\ManyToMany(targetEntity=Movies::class, mappedBy="genres")
+     */
+    private $movies;
+
+    public function __construct(string $name, int $id)
     {
         $this->name = $name;
+        $this->id = $id;
+        $this->movies = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -36,10 +45,13 @@ class Genre
         return $this->name;
     }
 
-    public function setName(string $name): self
+    public function setName(string $name): void
     {
         $this->name = $name;
+    }
 
-        return $this;
+    public function getMovies(): Collection
+    {
+        return $this->movies;
     }
 }
