@@ -54,7 +54,7 @@ class MovieMapper extends AbstractDataMapper
         return $movieModel;
     }
 
-    private function toArrayEntityGenre(array $models): array
+    public function toArrayEntityGenre(array $models): array
     {
         $entities = [];
 

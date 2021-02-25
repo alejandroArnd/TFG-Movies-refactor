@@ -93,4 +93,13 @@ class MoviesModel
             $this->genres[] = $genre;
         }
     }
+
+    public function removeGenre(GenreModel $genre): void
+    {
+        $key = array_search($genre, $this->genres, true);
+
+        if ($key) {
+            unset($this->genres[$key]);
+        }
+    }
 }

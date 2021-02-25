@@ -61,6 +61,16 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
         $movieFound->setReleaseDate($movieModel->getReleaseDate());
         $movieFound->setDuration($movieModel->getDuration());
         $movieFound->setIsDeleted($movieModel->getIsDeleted());
+
+        $genreEntities = $this->movieMapper->toArrayEntityGenre($movieModel->getGenres());
+
+        foreach($movieFound->getGenres() as $genre){
+            $movieFound->removeGenre($genre);
+        }
+        
+        foreach($genreEntities as $genre){
+            $movieFound->addGenre($genre);
+        }
         return $movieFound;
     }
 }
