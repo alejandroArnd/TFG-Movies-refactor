@@ -4,6 +4,7 @@ namespace App\Domain\Model;
 
 use DateTime;
 use App\Domain\Model\GenreModel;
+use App\Domain\Model\ReviewModel;
 
 class MoviesModel
 {
@@ -15,6 +16,7 @@ class MoviesModel
     private $duration;
     private $isDeleted;
     private $genres;
+    private $reviews;
 
     public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration, int $id = null, bool $isDeleted = false)
     {
@@ -25,6 +27,7 @@ class MoviesModel
         $this->duration = $duration;
         $this->isDeleted = $isDeleted;
         $this->genres = [];
+        $this->reviews = [];
     }
 
     public function getId(): ?int
@@ -100,6 +103,19 @@ class MoviesModel
 
         if ($key) {
             unset($this->genres[$key]);
+        }
+    }
+
+    public function getReviews(): array
+    {
+        return $this->reviews;
+    }
+
+    public function addReview(ReviewModel $review): void
+    {
+        if (!in_array($review, $this->reviews, true)) {
+            $this->reviews[] = $review;
+            $review->setMovies($this);
         }
     }
 }

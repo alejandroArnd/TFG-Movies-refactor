@@ -30,6 +30,16 @@ class ReviewMapper extends AbstractDataMapper
     }
     public function toModel(Review $reviewEntity): ?ReviewModel
     {
+        $movieModel = $this->moviesRepository->findById($reviewEntity->getMovies()->getId());
+        $review = new ReviewModel(
+            $reviewEntity->getTitle(), 
+            $reviewEntity->getParagraph(), 
+            $reviewEntity->getPostingDate(), 
+            $reviewEntity->getScore(),
+            $movieModel,
+            $reviewEntity->getId()
+        );
 
+        return $review;
     }
 }

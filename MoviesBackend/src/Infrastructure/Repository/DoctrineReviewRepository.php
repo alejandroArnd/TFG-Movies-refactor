@@ -25,4 +25,10 @@ class DoctrineReviewRepository extends ServiceEntityRepository implements Review
         $this->getEntityManager()->persist($reviewToSave);
         $this->getEntityManager()->flush();
     }
+
+    public function findByIdMovie($movieId): array
+    {
+        return $this->reviewMapper->toArrayModel($this->findBy(['movies' => $movieId]));
+    }
+
 }
