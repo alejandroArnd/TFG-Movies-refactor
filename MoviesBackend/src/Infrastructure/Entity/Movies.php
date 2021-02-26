@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use DateTime;
 use \App\Infrastructure\Entity\Genre;
+use \App\Infrastructure\Entity\Review;
 
 /**
  * @ORM\Entity
@@ -50,6 +51,11 @@ class Movies
      */
     private $genres;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Review::class, mappedBy="movies")
+     */
+    private $reviews;
+
     public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration,  int $id = null, bool $isDeleted = false)
     {
         $this->id = $id;
@@ -59,6 +65,7 @@ class Movies
         $this->duration = $duration;
         $this->isDeleted = $isDeleted;
         $this->genres = new ArrayCollection();
+        $this->reviews = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -131,5 +138,31 @@ class Movies
     public function removeGenre(Genre $genre): void
     {
         $this->genres->removeElement($genre);
+    }
+
+    public function getReviews(): Collection
+    {
+        return $this->reviews;
+    }
+
+    public function addReview(Review $review): self
+    {
+        if (!$this->reviews->contains($review)) {
+            $this->reviews[] = $review;
+            $review->setMovies($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReview(Review $review): self
+    {
+        if ($this->reviews->removeElement($review)) {
+            if ($review->getMovies() === $this) {
+                $review->setMovies(null);
+            }
+        }
+
+        return $this;
     }
 }
