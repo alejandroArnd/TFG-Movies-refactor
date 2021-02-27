@@ -12,6 +12,7 @@ use App\Application\UseCases\Movies\FindAllMovies;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Application\UseCases\Movies\SoftDeleteMovie;
 use App\Application\UseCases\Movies\FindMoviesByTitle;
+use App\Application\UseCases\Movies\FindOneMovieByTitle;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MoviesController extends AbstractController{
@@ -22,12 +23,14 @@ class MoviesController extends AbstractController{
     private ValidatorMovieService $validatorMovie;
     private FindMoviesByTitle $findMoviesByTitle;
     private UpdateMovie $updateMovie;
+    private FindOneMovieByTitle $findOneMoviesByTitle;
 
     public function __construct(
         FindAllMovies $findAllMovies, 
         CreateMovie $createMovie, 
         SoftDeleteMovie $softDeteleMovie, 
         FindMoviesByTitle $findMoviesByTitle,
+        FindOneMovieByTitle $findOneMoviesByTitle,
         UpdateMovie $updateMovie,
         ValidatorMovieService $validatorMovie
     ){
@@ -35,6 +38,7 @@ class MoviesController extends AbstractController{
         $this->createMovie = $createMovie;
         $this->softDeteleMovie = $softDeteleMovie;
         $this->findMoviesByTitle = $findMoviesByTitle;
+        $this->findOneMoviesByTitle = $findOneMoviesByTitle;
         $this->updateMovie = $updateMovie;
         $this->validatorMovie = $validatorMovie;
     }
@@ -84,6 +88,15 @@ class MoviesController extends AbstractController{
     public function findMoviesByTitle (Request $request, string $title): JsonResponse
     {
         $movies = $this->findMoviesByTitle->handle($title);
+        return new JsonResponse($movies, JsonResponse::HTTP_OK);
+    }
+
+    /**
+     * @Route("/api/movies/{title}", methods={"GET"})
+     */
+    public function findOneMovieByTitle (string $title): JsonResponse
+    {
+        $movies = $this->findOneMoviesByTitle->handle($title);
         return new JsonResponse($movies, JsonResponse::HTTP_OK);
     }
 
