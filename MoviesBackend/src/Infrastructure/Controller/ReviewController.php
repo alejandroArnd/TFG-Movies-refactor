@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Application\UseCases\Review\CreateReview;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use App\Application\Service\ValidatorReviewService;
 use App\Application\UseCases\Review\FindReviewsByIdMovie;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -14,11 +15,16 @@ class ReviewController extends AbstractController
 {
     private CreateReview $createReview;
     private FindReviewsByIdMovie $findReviewsByIdMoview;
+    private ValidatorReviewService $validatorReviewService;
     
-    public function __construct(CreateReview $createReview, FindReviewsByIdMovie $findReviewsByIdMovie)
-    {
+    public function __construct(
+        CreateReview $createReview, 
+        FindReviewsByIdMovie $findReviewsByIdMovie, 
+        ValidatorReviewService $validatorReviewService
+    ){
         $this->createReview = $createReview;
         $this->findReviewsByIdMovie = $findReviewsByIdMovie;
+        $this->validatorReviewService = $validatorReviewService;
     }
 
      /**
@@ -28,6 +34,7 @@ class ReviewController extends AbstractController
     {
         try{
             $review = json_decode($request->getContent());
+            $this->validatorReviewService->validate($review);
             $this->createReview->handle($review);
             return new JsonResponse("Review created!", JsonResponse::HTTP_OK);
         }catch(Exception $exception){
