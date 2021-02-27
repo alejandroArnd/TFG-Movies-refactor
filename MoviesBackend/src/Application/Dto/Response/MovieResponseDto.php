@@ -18,6 +18,8 @@ class MovieResponseDto
 
     public array $genres;
 
+    public array $reviews;
+
     public function getId(): int
     {
         return $this->id;
@@ -86,5 +88,15 @@ class MovieResponseDto
     public function setGenres($genre): void
     {
         $this->genre = $genre;
+    }
+
+    public function getReviews(): array
+    {
+        return $this->reviews;
+    }
+
+    public function setReviews($reviews): void
+    {
+        $this->reviews = $reviews;
     }
 }

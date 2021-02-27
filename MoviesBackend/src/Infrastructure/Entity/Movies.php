@@ -145,24 +145,11 @@ class Movies
         return $this->reviews;
     }
 
-    public function addReview(Review $review): self
+    public function addReview(Review $review): void
     {
         if (!$this->reviews->contains($review)) {
             $this->reviews[] = $review;
             $review->setMovies($this);
         }
-
-        return $this;
-    }
-
-    public function removeReview(Review $review): self
-    {
-        if ($this->reviews->removeElement($review)) {
-            if ($review->getMovies() === $this) {
-                $review->setMovies(null);
-            }
-        }
-
-        return $this;
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Infrastructure\Mapper;
 
 use App\Domain\Model\MoviesModel;
+use App\Domain\Model\ReviewModel;
 use App\Infrastructure\Entity\Movies;
 use App\Infrastructure\Mapper\GenreMapper;
 use App\Application\Repository\GenreRepository;
@@ -49,6 +50,19 @@ class MovieMapper extends AbstractDataMapper
         
         foreach($genreModels as $genre){
             $movieModel->addGenre($genre);
+        }
+
+        foreach($movieEntity->getReviews() as $review){
+            $reviewModel = new ReviewModel(
+                $review->getTitle(), 
+                $review->getParagraph(), 
+                $review->getPostingDate(), 
+                $review->getScore(),
+                $movieModel,
+                $review->getId()
+            );
+            
+            $movieModel->addReview($reviewModel);
         }
 
         return $movieModel;
