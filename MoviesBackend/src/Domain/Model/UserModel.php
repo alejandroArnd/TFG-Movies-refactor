@@ -10,10 +10,11 @@ class UserModel
     private $password;
     private $email;
 
-    public function __construct(string $username, string $email)
+    public function __construct(string $username, string $email, array $roles = null)
     {
         $this->username = $username;
         $this->email = $email;
+        $this->roles = $roles ? $roles : ['ROLE_USER'];
     }
 
     public function getId(): ?int
