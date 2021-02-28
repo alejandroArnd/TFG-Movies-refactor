@@ -25,10 +25,10 @@ class DoctrineUserRepository extends ServiceEntityRepository implements Password
         $this->userMapper = $userMapper;
     }
 
-    public function save(UserModel $user): void
+    public function save(UserModel $user, string $plainPassword): void
     {
         $userToSave = $this->userMapper->toEntity($user);
-        $userToSave->setPassword($this->encoder->encodePassword($userToSave,$user->getPlainPassword()));
+        $userToSave->setPassword($this->encoder->encodePassword($userToSave, $plainPassword));
         $this->getEntityManager()->persist($userToSave);
         $this->getEntityManager()->flush();
     }

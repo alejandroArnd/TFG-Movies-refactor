@@ -16,7 +16,7 @@ class CreateUser
 
     public function handle($user): void
     {
-        $user = new UserModel($user->username, $user->email, $user->password);
-        $this->userRepository->save($user);
+        $userModel = new UserModel($user->username, $user->email);
+        $this->userRepository->save($userModel, $user->password);
     }
 }

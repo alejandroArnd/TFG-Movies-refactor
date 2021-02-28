@@ -9,13 +9,11 @@ class UserModel
     private $roles = [];
     private $password;
     private $email;
-    private $plainPassword;
 
-    public function __construct(string $username, string $email, string $plainPassword)
+    public function __construct(string $username, string $email)
     {
         $this->username = $username;
         $this->email = $email;
-        $this->plainPassword = $plainPassword;
     }
 
     public function getId(): ?int
@@ -65,15 +63,4 @@ class UserModel
     {
         $this->email = $email;
     }
-
-    public function getPlainPassword(): string
-    {
-        return $this->plainPassword;
-    }
-
-    public function setPlainPassword(string $plainPassword): void
-    {
-        $this->plainPassword = $plainPassword;
-    }
-
 }

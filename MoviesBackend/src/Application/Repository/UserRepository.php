@@ -6,6 +6,6 @@ use App\Domain\Model\UserModel;
 
 interface UserRepository
 {
-    public function save(UserModel $user): void;
+    public function save(UserModel $user, string $plainPassword): void;
     
 }
