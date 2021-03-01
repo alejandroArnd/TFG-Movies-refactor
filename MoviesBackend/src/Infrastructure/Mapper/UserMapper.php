@@ -16,4 +16,12 @@ class UserMapper extends AbstractDataMapper
 
         return $user;
     }
+
+    public function toModel(User $user) : ?UserModel
+    {
+        $userModel = new UserModel($user->getUsername(), $user->getEmail(), $user->getRoles());
+        $userModel->setPassword($user->getPassword());
+
+        return $userModel;
+    }
 }

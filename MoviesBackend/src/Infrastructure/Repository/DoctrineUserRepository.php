@@ -33,6 +33,18 @@ class DoctrineUserRepository extends ServiceEntityRepository implements Password
         $this->getEntityManager()->flush();
     }
 
+    public function findByEmail(string $email): ?UserModel
+    {
+        $user = $this->findOneBy(['email' => $email]);
+        return (!$user) ? $user : $this->userMapper->toModel($user);
+    }
+    
+    public function findByUsername(string $username): ?UserModel
+    {
+        $user = $this->findOneBy(['username' => $username]);
+        return (!$user) ? $user : $this->userMapper->toModel($user);
+    }
+
     public function upgradePassword(UserInterface $user, string $newEncodedPassword): void
     {
         if (!$user instanceof User) {
