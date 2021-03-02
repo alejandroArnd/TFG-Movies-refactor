@@ -3,6 +3,7 @@
 namespace App\Domain\Model;
 
 use DateTime;
+use App\Domain\Model\UserModel;
 use App\Domain\Model\MoviesModel;
 
 class ReviewModel
@@ -13,8 +14,9 @@ class ReviewModel
     private $score;
     private $postingDate;
     private $movies;
+    private $user;
 
-    public function __construct(string $title, string $paragraph, DateTime $postingDate, float $score, MoviesModel $movies, int $id = null)
+    public function __construct(string $title, string $paragraph, DateTime $postingDate, float $score, MoviesModel $movies, UserModel $user, int $id = null)
     {
         $this->id = $id;
         $this->title = $title;
@@ -22,6 +24,7 @@ class ReviewModel
         $this->postingDate = $postingDate;
         $this->score = $score;
         $this->movies = $movies;
+        $this->user = $user;
     }
 
     public function getId(): ?int
@@ -77,5 +80,15 @@ class ReviewModel
     public function setMovies(?MoviesModel $movies): void
     {
         $this->movies = $movies;
+    }
+
+    public function getUser(): ?UserModel
+    {
+        return $this->user;
+    }
+
+    public function setUser(?UserModel $user): void
+    {
+        $this->user = $user;
     }
 }

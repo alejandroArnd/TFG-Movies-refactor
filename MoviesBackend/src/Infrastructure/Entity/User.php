@@ -2,6 +2,8 @@
 
 namespace App\Infrastructure\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -37,11 +39,17 @@ class User implements UserInterface
      */
     private $email;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Review::class, mappedBy="user")
+     */
+    private $reviews;
+
     public function __construct(string $username, string $email, array $roles = null)
     {
         $this->username = $username;
         $this->email = $email;
         $this->roles = $roles ? $roles : ['ROLE_USER'];
+        $this->reviews = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -109,5 +117,10 @@ class User implements UserInterface
         $this->email = $email;
 
         return $this;
+    }
+
+    public function getReviews(): Collection
+    {
+        return $this->reviews;
     }
 }

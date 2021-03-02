@@ -43,7 +43,13 @@ class Review
      */
     private $movies;
 
-    public function __construct(string $title, string $paragraph, DateTime $postingDate, float $score, Movies $movies, int $id = null)
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="reviews")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
+    public function __construct(string $title, string $paragraph, DateTime $postingDate, float $score, Movies $movies, User $user, int $id = null)
     {
         $this->id = $id;
         $this->title = $title;
@@ -51,6 +57,7 @@ class Review
         $this->postingDate = $postingDate;
         $this->score = $score;
         $this->movies = $movies;
+        $this->user = $user;
     }
 
     public function getId(): ?int
@@ -106,5 +113,15 @@ class Review
     public function setMovies(?Movies $movies): void
     {
         $this->movies = $movies;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): void
+    {
+        $this->user = $user;
     }
 }

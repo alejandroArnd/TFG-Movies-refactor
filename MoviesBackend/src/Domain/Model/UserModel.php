@@ -9,12 +9,15 @@ class UserModel
     private $roles = [];
     private $password;
     private $email;
+    private $reviews;
 
-    public function __construct(string $username, string $email, array $roles = null)
+    public function __construct(string $username, string $email, array $roles = null, int $id = null)
     {
         $this->username = $username;
         $this->email = $email;
         $this->roles = $roles ? $roles : ['ROLE_USER'];
+        $this->reviews = [];
+        $this->id = $id;
     }
 
     public function getId(): ?int
@@ -63,5 +66,10 @@ class UserModel
     public function setEmail(string $email): void
     {
         $this->email = $email;
+    }
+
+    public function getReviews(): array
+    {
+        return $this->reviews;
     }
 }
