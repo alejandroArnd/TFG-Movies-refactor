@@ -34,7 +34,7 @@ final class Version20210226121945 extends AbstractMigration
     {
         $table = $schema->getTable('review');
 
-        $table->removeForeignKey('FK_movie');
+        $table->removeForeignKey('FK_movie_review');
 
         $schema->dropTable('review');
     }
