@@ -40,7 +40,7 @@ class UserController extends AbstractController
         }
     }
 
-        /**
+    /**
      * @Route("/api/login", methods={"POST"})
      */
     public function login(UserInterface $user, JWTTokenManagerInterface $JWTTokenManager): JsonResponse

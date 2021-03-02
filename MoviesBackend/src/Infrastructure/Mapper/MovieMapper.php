@@ -2,6 +2,7 @@
 
 namespace App\Infrastructure\Mapper;
 
+use App\Domain\Model\UserModel;
 use App\Domain\Model\MoviesModel;
 use App\Domain\Model\ReviewModel;
 use App\Infrastructure\Entity\Movies;
@@ -53,12 +54,17 @@ class MovieMapper extends AbstractDataMapper
         }
 
         foreach($movieEntity->getReviews() as $review){
+            $userEntity = $review->getUser();
+
+            $userModel = new UserModel($userEntity->getUsername(), $userEntity->getEmail(), $userEntity->getRoles(), $userEntity->getId());
+            $userModel->setPassword($userEntity->getPassword());
             $reviewModel = new ReviewModel(
                 $review->getTitle(), 
                 $review->getParagraph(), 
                 $review->getPostingDate(), 
                 $review->getScore(),
                 $movieModel,
+                $userModel,
                 $review->getId()
             );
             

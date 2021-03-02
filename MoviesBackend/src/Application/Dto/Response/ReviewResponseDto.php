@@ -12,6 +12,8 @@ class ReviewResponseDto
 
     public float $score;
 
+    public UserResponseDto $user;
+
     public function getTitle(): string
     {
         return $this->title;
@@ -50,6 +52,16 @@ class ReviewResponseDto
     public function setScore($score): void
     {
         $this->score = $score;
+    }
+
+    public function getUser(): UserResponseDto
+    {
+        return $this->user;
+    }
+
+    public function setUser(UserResponseDto $user): void
+    {
+        $this->user = $user;
     }
 
 }
