@@ -6,4 +6,5 @@ MoviesBackend/config/secrets/prod/prod.decrypt.private.php
 MoviesBackend/public/bundles/
 MoviesBackend/var/
 MoviesBackend/vendor/
+MoviesBackend/config/jwt
 ###< symfony/framework-bundle ###
