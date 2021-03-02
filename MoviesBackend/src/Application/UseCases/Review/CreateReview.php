@@ -19,7 +19,7 @@ class CreateReview
         $this->reviewRepository = $reviewRepository;
     }
 
-    public function handle($review): void
+    public function handle($review, $user): void
     {
         $movieFound = $this->moviesRepository->findById($review->movieId);
 
@@ -27,7 +27,7 @@ class CreateReview
             throw new MovieNotFoundException();
         }
 
-        $review = new ReviewModel($review->title, $review->paragraph, new DateTime(), $review->score, $movieFound);
+        $review = new ReviewModel($review->title, $review->paragraph, new DateTime(), $review->score, $movieFound, $user);
 
         $this->reviewRepository->save($review);
 

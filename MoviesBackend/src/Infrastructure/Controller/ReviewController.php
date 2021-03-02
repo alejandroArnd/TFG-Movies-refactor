@@ -3,6 +3,7 @@
 namespace App\Infrastructure\Controller;
 
 use Exception;
+use App\Infrastructure\Mapper\UserMapper;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Application\UseCases\Review\CreateReview;
@@ -16,15 +17,18 @@ class ReviewController extends AbstractController
     private CreateReview $createReview;
     private FindReviewsByIdMovie $findReviewsByIdMoview;
     private ValidatorReviewService $validatorReviewService;
+    private UserMapper $userMapper;
     
     public function __construct(
         CreateReview $createReview, 
         FindReviewsByIdMovie $findReviewsByIdMovie, 
-        ValidatorReviewService $validatorReviewService
+        ValidatorReviewService $validatorReviewService,
+        UserMapper $userMapper
     ){
         $this->createReview = $createReview;
         $this->findReviewsByIdMovie = $findReviewsByIdMovie;
         $this->validatorReviewService = $validatorReviewService;
+        $this->userMapper = $userMapper;
     }
 
      /**
@@ -35,8 +39,9 @@ class ReviewController extends AbstractController
         try{
             $review = json_decode($request->getContent());
             $this->validatorReviewService->validate($review);
-            $this->createReview->handle($review);
-            return new JsonResponse("Review created!", JsonResponse::HTTP_OK);
+            $user = $this->userMapper->toModel($this->getUser());
+            $this->createReview->handle($review, $user);
+            return new JsonResponse("Review Was created", JsonResponse::HTTP_OK);
         }catch(Exception $exception){
             return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_BAD_REQUEST);
         }
