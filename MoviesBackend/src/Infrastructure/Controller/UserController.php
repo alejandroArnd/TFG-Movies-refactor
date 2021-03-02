@@ -8,7 +8,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Application\Service\ValidatorUserService;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
 
 class UserController extends AbstractController
 {
@@ -36,5 +38,13 @@ class UserController extends AbstractController
         }catch(Exception $exception){
             return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_BAD_REQUEST);
         }
+    }
+
+        /**
+     * @Route("/api/login", methods={"POST"})
+     */
+    public function login(UserInterface $user, JWTTokenManagerInterface $JWTTokenManager): JsonResponse
+    {
+        return new JsonResponse(['token' => $jwtManager->create($user)], JsonResponse::HTTP_OK);
     }
 }
