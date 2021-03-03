@@ -7,4 +7,6 @@ MoviesBackend/public/bundles/
 MoviesBackend/var/
 MoviesBackend/vendor/
 MoviesBackend/config/jwt
+/phpunit.xml
+.phpunit.result.cache
 ###< symfony/framework-bundle ###
