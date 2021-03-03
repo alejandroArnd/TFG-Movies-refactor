@@ -25,9 +25,9 @@ security:
                 failure_handler:          lexik_jwt_authentication.handler.authentication_failure
         
         movie:
-            pattern: ^/api/movies
+            pattern: ^/api/movies(?(1)(/\d+$)|)
             stateless: true
-            methods: [POST, PUT]
+            methods: [POST, PUT, DELETE]
             guard:
                 authenticators:
                     - lexik_jwt_authentication.jwt_token_authenticator
@@ -57,3 +57,4 @@ security:
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: '^/api/movies', roles: ROLE_ADMIN, methods: [POST, PUT] }
         - { path: '^/api/review', roles: ROLE_USER}
+        - { path: '^/api/movies/\d+$', roles: ROLE_ADMIN, methods: [DELETE]}
