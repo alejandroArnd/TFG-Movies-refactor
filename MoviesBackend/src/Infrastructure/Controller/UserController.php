@@ -36,7 +36,8 @@ class UserController extends AbstractController
             $this->createUser->handle($user);
             return new JsonResponse('User was created', JsonResponse::HTTP_OK);
         }catch(Exception $exception){
-            return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_BAD_REQUEST);
+            $messageError = ['message' => $exception->getMessage(), 'status' => $exception->getCode()];
+            return new JsonResponse($messageError, $exception->getCode());
         }
     }
 

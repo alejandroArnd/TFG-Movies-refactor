@@ -6,8 +6,8 @@ use Exception;
 
 class ReleaseDateIsNotAValidDateException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "Invalid date format", "status" => 400];
+        parent::__construct("Invalid date format", 400);
     }
 }

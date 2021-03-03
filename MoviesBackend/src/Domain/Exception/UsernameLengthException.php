@@ -6,8 +6,8 @@ use Exception;
 
 class UsernameLengthException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "Username must have 180 characters", "status" => 400];
+        parent::__construct("Username must have 180 characters", 400);
     }
 }

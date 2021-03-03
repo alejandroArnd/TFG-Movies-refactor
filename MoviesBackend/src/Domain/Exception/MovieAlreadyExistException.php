@@ -6,8 +6,8 @@ use Exception;
 
 class MovieAlreadyExistException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "This movie already exist", "status" => 400];
+        parent::__construct("This movie already exist", 400);
     }
 }

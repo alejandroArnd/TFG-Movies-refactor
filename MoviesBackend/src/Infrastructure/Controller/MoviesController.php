@@ -64,7 +64,8 @@ class MoviesController extends AbstractController{
             $this->createMovie->handle($movie);
             return new JsonResponse("Movie created!", JsonResponse::HTTP_OK);
         }catch(Exception $exception){
-            return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_BAD_REQUEST);
+            $messageError = ['message' => $exception->getMessage(), 'status' => $exception->getCode()];
+            return new JsonResponse($messageError, $exception->getCode());
         }
     }
 
@@ -77,7 +78,8 @@ class MoviesController extends AbstractController{
             $this->softDeteleMovie->handle($id);
             return new JsonResponse("Movie was deleted", JsonResponse::HTTP_OK);
         }catch(Exception $exception){
-            return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_NOT_FOUND);
+            $messageError = ['message' => $exception->getMessage(), 'status' => $exception->getCode()];
+            return new JsonResponse($messageError, $exception->getCode());
         }
     }
 
@@ -111,7 +113,8 @@ class MoviesController extends AbstractController{
             $this->updateMovie->handle($movie);
             return new JsonResponse("Movie was updated!", JsonResponse::HTTP_OK);
         }catch(Exception $exception){
-            return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_BAD_REQUEST);
+            $messageError = ['message' => $exception->getMessage(), 'status' => $exception->getCode()];
+            return new JsonResponse($messageError, $exception->getCode());
         }
     }
     

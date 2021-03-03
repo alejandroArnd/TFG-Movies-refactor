@@ -6,8 +6,8 @@ use Exception;
 
 class UsernameAlreadyExistException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "This username already exist", "status" => 400];
+        parent::__construct("This username already exist", 400);
     }
 }

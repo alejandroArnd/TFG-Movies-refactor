@@ -6,8 +6,8 @@ use Exception;
 
 class OverviewLengthException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "Overview must have 1000 characters", "status" => 400];
+        parent::__construct("Overview must have 1000 characters", 400);
     }
 }

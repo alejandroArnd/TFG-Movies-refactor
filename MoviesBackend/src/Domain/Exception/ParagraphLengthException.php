@@ -6,8 +6,8 @@ use Exception;
 
 class ParagraphLengthException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "Paragraph must have 1000 characters", "status" => 400];
+        parent::__construct("Paragraph must have 1000 characters", 400);
     }
 }

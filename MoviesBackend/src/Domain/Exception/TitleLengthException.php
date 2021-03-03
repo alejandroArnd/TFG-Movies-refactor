@@ -6,8 +6,8 @@ use Exception;
 
 class TitleLengthException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "Title must have 255 characters", "status" => 400];
+        parent::__construct("Title must have 255 characters", 400);
     }
 }

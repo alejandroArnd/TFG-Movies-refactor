@@ -6,8 +6,8 @@ use Exception;
 
 class MovieNotFoundException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "Movie was not found", "status" => 404];
+        parent::__construct("Movie was not found", 404);
     }
 }

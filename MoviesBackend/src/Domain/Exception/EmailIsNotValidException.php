@@ -6,8 +6,8 @@ use Exception;
 
 class EmailIsNotValidException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "This email is not valid", "status" => 400];
+        parent::__construct("This email is not valid", 400);
     }
 }

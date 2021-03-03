@@ -6,8 +6,8 @@ use Exception;
 
 class EmailAlreadyInUseException extends Exception
 {
-    public function errorMessage()
+    public function __construct()
     {
-        return ["message" => "This email already in use", "status" => 400];
+        parent::__construct("This email already in use", 400);
     }
 }

@@ -43,7 +43,8 @@ class ReviewController extends AbstractController
             $this->createReview->handle($review, $user);
             return new JsonResponse("Review Was created", JsonResponse::HTTP_OK);
         }catch(Exception $exception){
-            return new JsonResponse($exception->errorMessage(), JsonResponse::HTTP_BAD_REQUEST);
+            $messageError = ['message' => $exception->getMessage(), 'status' => $exception->getCode()];
+            return new JsonResponse($messageError, $exception->getCode());
         }
     }
 
@@ -56,7 +57,8 @@ class ReviewController extends AbstractController
             $reviews = $this->findReviewsByIdMovie->handle($movieId);
             return new JsonResponse($reviews, JsonResponse::HTTP_OK);
         }catch(Exception $exception){
-            return new JsonResponse($exception->getMessage(), JsonResponse::HTTP_NOT_FOUND);
+            $messageError = ['message' => $exception->getMessage(), 'status' => $exception->getCode()];
+            return new JsonResponse($messageError, $exception->getCode());
         }
     }
 
