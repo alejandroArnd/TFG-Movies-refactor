@@ -2,6 +2,7 @@
 
 namespace App\Application\Service;
 
+use DateTime;
 use App\Domain\Exception\TitleLengthException;
 use App\Domain\Exception\OverviewLengthException;
 use App\Domain\Exception\DurationIsNotValidNumberException;
@@ -11,7 +12,7 @@ class ValidatorMovieService
 {
     public function validate($movie)
     {
-        if(!strtotime($movie->releaseDate)){
+        if(!strtotime($movie->releaseDate) && !$this->validateDate($movie->releaseDate)){
             throw new ReleaseDateIsNotAValidDateException();
         }
 
@@ -26,5 +27,11 @@ class ValidatorMovieService
         if(strlen($movie->title) > 255){
             throw new TitleLengthException();
         }
+    }
+
+    private function validateDate($date, $format = 'Y-m-d')
+    {
+        $dataToValidate = DateTime::createFromFormat($format, $date);
+        return $dataToValidate && $dataToValidate->format($format) === $date;
     }
 }
