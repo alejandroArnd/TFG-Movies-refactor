@@ -2,11 +2,10 @@
 
 namespace App\Application\Dto\Response\Transformer;
 
-use App\Applocation\Dto\Response\ReviewResponseDto;
+use App\Application\Dto\Response\ReviewResponseDto;
 
 class ReviewResponseDtoTransformer extends ResponseDtoTransformer
 {
-
     private UserResponseDtoTransformer $userResponseDtoTransformer;
 
     public function __construct(UserResponseDtoTransformer $userResponseDtoTransformer)

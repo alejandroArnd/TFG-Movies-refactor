@@ -2,7 +2,7 @@
 
 namespace App\Application\Dto\Response\Transformer;
 
-use App\Applocation\Dto\Response\MovieResponseDto;
+use App\Application\Dto\Response\MovieResponseDto;
 
 class MovieResponseDtoTransformer extends ResponseDtoTransformer
 {

@@ -2,7 +2,7 @@
 
 namespace App\Application\Dto\Response\Transformer;
 
-use App\Applocation\Dto\Response\GenreResponseDto;
+use App\Application\Dto\Response\GenreResponseDto;
 
 class GenreResponseDtoTransformer extends ResponseDtoTransformer
 {

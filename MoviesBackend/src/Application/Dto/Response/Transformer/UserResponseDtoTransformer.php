@@ -2,7 +2,7 @@
 
 namespace App\Application\Dto\Response\Transformer;
 
-use App\Applocation\Dto\Response\UserResponseDto;
+use App\Application\Dto\Response\UserResponseDto;
 
 class UserResponseDtoTransformer extends ResponseDtoTransformer
 {
