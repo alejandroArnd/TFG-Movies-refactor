@@ -18,7 +18,6 @@ class FindAllMovies
 
     public function handle(): array
     {
-        $moviesJson;
         $movies = $this->moviesRepository->getAll();
         $moviesJson = $this->movieResponseDtoTransformer->transformFromObjects($movies);
         return $moviesJson;

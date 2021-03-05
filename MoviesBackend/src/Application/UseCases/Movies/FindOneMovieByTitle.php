@@ -4,7 +4,7 @@ namespace App\Application\UseCases\Movies;
 
 use App\Application\Repository\MoviesRepository;
 use App\Domain\Exception\MovieNotFoundException;
-use App\Applocation\Dto\Response\MovieResponseDto;
+use App\Application\Dto\Response\MovieResponseDto;
 use App\Application\Dto\Response\Transformer\MovieResponseDtoTransformer;
 
 class FindOneMovieByTitle

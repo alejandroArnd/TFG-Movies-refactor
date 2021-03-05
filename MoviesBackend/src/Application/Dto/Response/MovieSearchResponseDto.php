@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Applocation\Dto\Response;
+namespace App\Application\Dto\Response;
 
 class MovieSearchResponseDto
 {
