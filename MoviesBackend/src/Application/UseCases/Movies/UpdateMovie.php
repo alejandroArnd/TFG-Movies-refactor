@@ -5,6 +5,7 @@ namespace App\Application\UseCases\Movies;
 use DateTime;
 use App\Application\Repository\GenreRepository;
 use App\Application\Repository\MoviesRepository;
+use App\Domain\Exception\GenreNotFoundException;
 use App\Domain\Exception\MovieNotFoundException;
 use App\Domain\Exception\MovieAlreadyExistException;
 
