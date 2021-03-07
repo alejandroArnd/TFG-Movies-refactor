@@ -9,7 +9,7 @@ class ValidatorUserService
 {
     public function validate($user)
     {
-        if(strlen($user->username) > 100){
+        if(strlen($user->username) > 40){
             throw new UsernameLengthException();
         }
 
