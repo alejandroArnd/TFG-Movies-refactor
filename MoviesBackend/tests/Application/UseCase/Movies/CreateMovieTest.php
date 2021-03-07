@@ -25,7 +25,6 @@ class CreateMovieTest extends TestCase
         $this->createMovie = new CreateMovie($this->moviesRepository, $this->genreRepository);
     }
 
-
     public function testCreateMovieCorrectly(): void
     {
         $movie = json_decode('{
