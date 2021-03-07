@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Application\UseCase\Movies;
+namespace App\Tests\Application\UseCase\User;
 
 use App\Domain\Model\UserModel;
 use PHPUnit\Framework\TestCase;
