@@ -51,10 +51,10 @@ class FindMoviesByTitleTest extends TestCase
 
         $genreModel = new GenreModel('Action', 1);
 
-        $movieModelFirst = new MoviesModel('example1', 'example', new DateTime('2021-02-01'), 3000, 1);
+        $movieModelFirst = new MoviesModel('example1', 'example', new DateTime('2021-02-01'), 3000, 'http://localhost:9090/files/test1.jpg', 1);
         $movieModelFirst->addGenre($genreModel);
 
-        $movieModelSecond = new MoviesModel('example2', 'example', new DateTime('2021-02-01'), 3600, 2);
+        $movieModelSecond = new MoviesModel('example2', 'example', new DateTime('2021-02-01'), 3600, 'http://localhost:9090/files/test2.jpg', 2);
         $movieModelSecond->addGenre($genreModel);
 
         return  [$movieModelFirst, $movieModelSecond];
@@ -65,10 +65,12 @@ class FindMoviesByTitleTest extends TestCase
         $movieDtoFirst = new MovieSearchResponseDto();
         $movieDtoFirst->setId(1);
         $movieDtoFirst->setTitle('example1');
+        $movieDtoFirst->setAccessiblePath('http://localhost:9090/files/test1.jpg');
 
         $movieDtoSecond = new MovieSearchResponseDto();
         $movieDtoSecond->setId(2);
         $movieDtoSecond->setTitle('example2');
+        $movieDtoSecond->setAccessiblePath('http://localhost:9090/files/test2.jpg');
 
         return  [$movieDtoFirst, $movieDtoSecond];
     }

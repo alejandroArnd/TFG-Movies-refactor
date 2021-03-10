@@ -44,7 +44,7 @@ class FindOneMovieByTitleTest extends TestCase
     {
         $genreModel = new GenreModel('Action', 1);
 
-        $movieModel = new MoviesModel('example1', 'example', new DateTime('2021-02-01'), 3000, 1);
+        $movieModel = new MoviesModel('example1', 'example', new DateTime('2021-02-01'), 3000, 'http://localhost:9090/files/test1.jpg', 1);
         $movieModel->addGenre($genreModel);
 
         $genreDto = new GenreResponseDto();
@@ -59,6 +59,7 @@ class FindOneMovieByTitleTest extends TestCase
         $movieDtoExpected->setIsDeleted(false);
         $movieDtoExpected->setReviews([]);
         $movieDtoExpected->setGenres([$genreDto]);
+        $movieDtoExpected->setAccessiblePath('http://localhost:9090/files/test1.jpg');
         
         $this->moviesRepository->expects($this->once())
             ->method('findOneByTitle')
