@@ -56,7 +56,12 @@ class Movies
      */
     private $reviews;
 
-    public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration,  int $id = null, bool $isDeleted = false)
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $accessiblePath;
+
+    public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration, string $accessiblePath = null, int $id = null, bool $isDeleted = false)
     {
         $this->id = $id;
         $this->title = $title;
@@ -64,6 +69,7 @@ class Movies
         $this->releaseDate = $releaseDate;
         $this->duration = $duration;
         $this->isDeleted = $isDeleted;
+        $this->accessiblePath = $accessiblePath;
         $this->genres = new ArrayCollection();
         $this->reviews = new ArrayCollection();
     }
@@ -151,5 +157,15 @@ class Movies
             $this->reviews[] = $review;
             $review->setMovies($this);
         }
+    }
+
+    public function getAccessiblePath(): ?string
+    {
+        return $this->accessiblePath;
+    }
+
+    public function setAccessiblePath(string $accessiblePath): void
+    {
+        $this->accessiblePath = $accessiblePath;
     }
 }

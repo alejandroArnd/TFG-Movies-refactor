@@ -15,10 +15,11 @@ class MoviesModel
     private $releaseDate;
     private $duration;
     private $isDeleted;
+    private $accessiblePath;
     private $genres;
     private $reviews;
 
-    public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration, int $id = null, bool $isDeleted = false)
+    public function __construct(string $title, string $overview, DateTime $releaseDate, int $duration, string $accessiblePath = null, int $id = null, bool $isDeleted = false)
     {
         $this->id = $id;
         $this->title = $title;
@@ -26,6 +27,7 @@ class MoviesModel
         $this->releaseDate = $releaseDate;
         $this->duration = $duration;
         $this->isDeleted = $isDeleted;
+        $this->accessiblePath = $accessiblePath;
         $this->genres = [];
         $this->reviews = [];
     }
@@ -117,5 +119,15 @@ class MoviesModel
             $this->reviews[] = $review;
             $review->setMovies($this);
         }
+    }
+
+    public function getAccessiblePath(): string
+    {
+        return $this->accessiblePath;
+    }
+
+    public function setAccessiblePath($accessiblePath): void
+    {
+        $this->accessiblePath = $accessiblePath;
     }
 }
