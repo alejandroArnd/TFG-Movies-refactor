@@ -26,6 +26,7 @@ class MovieResponseDtoTransformer extends ResponseDtoTransformer
         $dto->setReleaseDate($movie->getReleaseDate()->format('Y-m-d'),);
         $dto->setDuration($movie->getDuration());
         $dto->setIsDeleted($movie->getIsDeleted());
+        $dto->setAccessiblePath($movie->getAccessiblePath());
         $dto->setGenres($this->genreResponseDtoTransformer->transformFromObjects($movie->getGenres()));
         $dto->setReviews($this->reviewResponseDtoTransformer->transformFromObjects($movie->getReviews()));
 

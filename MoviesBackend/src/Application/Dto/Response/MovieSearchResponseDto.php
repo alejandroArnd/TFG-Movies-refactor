@@ -8,6 +8,8 @@ class MovieSearchResponseDto
 
     public string $title;
 
+    public string $accessiblePath;
+
 
     public function getId(): int
     {
@@ -29,4 +31,13 @@ class MovieSearchResponseDto
         $this->title = $title;
     }
 
+    public function getAccessiblePath(): string
+    {
+        return $this->accessiblePath;
+    }
+ 
+    public function setAccessiblePath($accessiblePath): void
+    {
+        $this->accessiblePath = $accessiblePath;
+    }
 }

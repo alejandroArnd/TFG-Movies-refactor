@@ -16,6 +16,8 @@ class MovieResponseDto
 
     public bool $isDeleted;
 
+    public string $accessiblePath;
+
     public array $genres;
 
     public array $reviews;
@@ -98,5 +100,15 @@ class MovieResponseDto
     public function setReviews($reviews): void
     {
         $this->reviews = $reviews;
+    }
+
+    public function getAccessiblePath(): string
+    {
+        return $this->accessiblePath;
+    }
+
+    public function setAccessiblePath($accessiblePath): void
+    {
+        $this->accessiblePath = $accessiblePath;
     }
 }

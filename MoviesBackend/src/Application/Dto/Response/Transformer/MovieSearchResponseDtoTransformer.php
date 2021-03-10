@@ -11,6 +11,7 @@ class MovieSearchResponseDtoTransformer extends ResponseDtoTransformer
         $dto = new MovieSearchResponseDto();
         $dto->setId($movie->getId());
         $dto->setTitle($movie->getTitle());
+        $dto->setAccessiblePath($movie->getAccessiblePath());
 
         return $dto;
     }
