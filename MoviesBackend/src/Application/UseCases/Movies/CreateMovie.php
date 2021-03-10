@@ -7,17 +7,22 @@ use App\Domain\Model\MoviesModel;
 use App\Application\Repository\GenreRepository;
 use App\Application\Repository\MoviesRepository;
 use App\Domain\Exception\GenreNotFoundException;
+use App\Application\Service\ManageUploadFileService;
 use App\Domain\Exception\MovieAlreadyExistException;
 
 class CreateMovie
 {
     private MoviesRepository $moviesRepository;
     private GenreRepository $genreRepository;
+    private ManageUploadFileService $manageUploadFileService;
+    private string $pathToUpload;
 
-    public function __construct(MoviesRepository $moviesRepository, GenreRepository $genreRepository)
+    public function __construct(MoviesRepository $moviesRepository, GenreRepository $genreRepository, ManageUploadFileService $manageUploadFileService)
     {
         $this->moviesRepository = $moviesRepository;
         $this->genreRepository = $genreRepository;
+        $this->manageUploadFileService = $manageUploadFileService;
+        $this->pathToUpload = "/var/www/html/uploadMovieImages/";
     }
 
     public function handle($movie): void
@@ -42,6 +47,8 @@ class CreateMovie
             $newMovie->addGenre($genreFound);
         }
 
+        $accessiblePath = $this->manageUploadFileService->uploadFileFromBase64($this->pathToUpload, $movie);
+        $newMovie->setAccessiblePath($accessiblePath);
         $this->moviesRepository->save($newMovie);
     }
 }

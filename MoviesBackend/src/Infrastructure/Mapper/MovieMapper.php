@@ -28,7 +28,8 @@ class MovieMapper extends AbstractDataMapper
             $movieModel->getTitle(), 
             $movieModel->getOverview(), 
             $movieModel->getReleaseDate(), 
-            $movieModel->getDuration(), 
+            $movieModel->getDuration(),
+            $movieModel->getAccessiblePath(), 
         );
 
         foreach($genresEntities as $genre){
@@ -43,6 +44,7 @@ class MovieMapper extends AbstractDataMapper
             $movieEntity->getOverview(), 
             $movieEntity->getReleaseDate(), 
             $movieEntity->getDuration(),
+            $movieEntity->getAccessiblePath(),
             $movieEntity->getId(),
             $movieEntity->getIsDeleted() 
         );
