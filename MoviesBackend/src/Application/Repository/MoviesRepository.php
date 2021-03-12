@@ -14,5 +14,5 @@ interface MoviesRepository
 
     public function findOneByTitle(string $title): ?MoviesModel;
 
-    public function findByTitle(string $title): array;
+    public function findMoviesBySeveralCriterias(object $criteriaParams): object;
 }

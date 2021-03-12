@@ -11,7 +11,7 @@ use App\Application\Service\ValidatorMovieService;
 use App\Application\UseCases\Movies\FindAllMovies;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Application\UseCases\Movies\SoftDeleteMovie;
-use App\Application\UseCases\Movies\FindMoviesByTitle;
+use App\Application\UseCases\Movies\FindMoviesBySeveralCriterias;
 use App\Application\UseCases\Movies\FindOneMovieByTitle;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -21,7 +21,7 @@ class MoviesController extends AbstractController{
     private CreateMovie $createMovie;
     private SoftDeleteMovie $softDeteleMovie;
     private ValidatorMovieService $validatorMovie;
-    private FindMoviesByTitle $findMoviesByTitle;
+    private FindMoviesBySeveralCriterias $findMoviesBySeveralCriterias;
     private UpdateMovie $updateMovie;
     private FindOneMovieByTitle $findOneMoviesByTitle;
 
@@ -29,7 +29,7 @@ class MoviesController extends AbstractController{
         FindAllMovies $findAllMovies, 
         CreateMovie $createMovie, 
         SoftDeleteMovie $softDeteleMovie, 
-        FindMoviesByTitle $findMoviesByTitle,
+        FindMoviesBySeveralCriterias $findMoviesBySeveralCriterias,
         FindOneMovieByTitle $findOneMoviesByTitle,
         UpdateMovie $updateMovie,
         ValidatorMovieService $validatorMovie
@@ -37,7 +37,7 @@ class MoviesController extends AbstractController{
         $this->findAllMovies = $findAllMovies;
         $this->createMovie = $createMovie;
         $this->softDeteleMovie = $softDeteleMovie;
-        $this->findMoviesByTitle = $findMoviesByTitle;
+        $this->findMoviesBySeveralCriterias = $findMoviesBySeveralCriterias;
         $this->findOneMoviesByTitle = $findOneMoviesByTitle;
         $this->updateMovie = $updateMovie;
         $this->validatorMovie = $validatorMovie;
@@ -83,13 +83,13 @@ class MoviesController extends AbstractController{
         }
     }
 
-    
      /**
-     * @Route("/api/movies/{title}", methods={"POST"})
+     * @Route("/api/movies/search", methods={"GET"})
      */
-    public function findMoviesByTitle (Request $request, string $title): JsonResponse
+    public function findMoviesBySeveralCriterias (Request $request): JsonResponse
     {
-        $movies = $this->findMoviesByTitle->handle($title);
+        $criteriaParams= json_decode (json_encode ($request->query->all()), false);
+        $movies = $this->findMoviesBySeveralCriterias->handle($criteriaParams);
         return new JsonResponse($movies, JsonResponse::HTTP_OK);
     }
 

@@ -7,6 +7,7 @@ use App\Infrastructure\Entity\Movies;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Infrastructure\Mapper\MovieMapper;
 use App\Application\Repository\MoviesRepository;
+use App\Infrastrcture\Service\QueryBuilderMovie;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 class DoctrineMoviesRepository extends ServiceEntityRepository implements MoviesRepository
@@ -42,15 +43,15 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
         return (!$movie) ? $movie : $this->movieMapper->toModel($movie);
     }
 
-    public function findByTitle(string $title): array
+    public function findMoviesBySeveralCriterias(object $criteriaParams): object
     {
-        $queryBuilder = $this->createQueryBuilder('m');
-        $movies = $queryBuilder->where($queryBuilder->expr()->like('m.title',':title'))
-                ->setParameter('title','%'.$title.'%')
-                ->getQuery()
-                ->getResult();
-
-        return $this->movieMapper->toArrayModel($movies);
+        $queryBuilderMovie = new QueryBuilderMovie();
+        [$movies, $totalItems] = $queryBuilderMovie->createQueryBuilderMovie($this)
+            ->addSearchByTitle($criteriaParams->title)
+            ->addSearchByGenres($criteriaParams)
+            ->getPaginateResultQuery(2,$criteriaParams->page);
+        $searchResponse = (object) ['movies' => $this->movieMapper->toArrayModel($movies), 'totalItems' => $totalItems];
+        return $searchResponse;
     }
 
     private function update($movieModel)
