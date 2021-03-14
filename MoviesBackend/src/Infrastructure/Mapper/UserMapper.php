@@ -9,12 +9,10 @@ class UserMapper extends AbstractDataMapper
 {
     public function toEntity(UserModel $userModel): ?User
     {
-        $user = new User(
+        return new User(
             $userModel->getUsername(), 
             $userModel->getEmail(), 
         );
-
-        return $user;
     }
 
     public function toModel(User $user) : ?UserModel

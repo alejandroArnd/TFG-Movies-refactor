@@ -3,21 +3,19 @@
 namespace App\Infrastructure\Mapper;
 
 use App\Domain\Model\UserModel;
+use App\Domain\Model\GenreModel;
 use App\Domain\Model\MoviesModel;
 use App\Domain\Model\ReviewModel;
 use App\Infrastructure\Entity\Movies;
-use App\Infrastructure\Mapper\GenreMapper;
 use App\Application\Repository\GenreRepository;
 
 class MovieMapper extends AbstractDataMapper
 {
     private GenreRepository $genreRepository;
-    private GenreMapper $genreMapper;
 
-    public function __construct(GenreRepository $genreRepository, GenreMapper $genreMapper)
+    public function __construct(GenreRepository $genreRepository)
     {
         $this->genreRepository = $genreRepository;
-        $this->genreMapper = $genreMapper;
     }
 
     public function toEntity(MoviesModel $movieModel): ?Movies
@@ -49,12 +47,35 @@ class MovieMapper extends AbstractDataMapper
             $movieEntity->getIsDeleted() 
         );
 
-        $genreModels = $this->genreMapper->toArrayModel($movieEntity->getGenres()->toArray());
+        $movieModel = $this->addGenresInToMovieModel($movieModel, $movieEntity);
+
+        $movieModel = $this->addReviewsInToMovieModel($movieModel, $movieEntity);
+
+        return $movieModel;
+    }
+
+    public function toArrayEntityGenre(array $models): array
+    {
+        $entities = [];
+
+        foreach($models as $model){
+            $entities[] = $this->genreRepository->findOneByName($model->getName(), true);
+        }
         
-        foreach($genreModels as $genre){
-            $movieModel->addGenre($genre);
+        return $entities;
+    }
+
+    private function addGenresInToMovieModel(MoviesModel $movieModel, Movies $movieEntity): MoviesModel
+    {
+        foreach($movieEntity->getGenres()->toArray() as $genre){
+            $movieModel->addGenre(new GenreModel($genre->getName(), $genre->getId()));
         }
 
+        return $movieModel;
+    }
+
+    private function addReviewsInToMovieModel(MoviesModel $movieModel, Movies $movieEntity): MoviesModel
+    {
         foreach($movieEntity->getReviews() as $review){
             $userEntity = $review->getUser();
 
@@ -74,16 +95,5 @@ class MovieMapper extends AbstractDataMapper
         }
 
         return $movieModel;
-    }
-
-    public function toArrayEntityGenre(array $models): array
-    {
-        $entities = [];
-
-        foreach($models as $model){
-            $entities[] = $this->genreRepository->findOneByName($model->getName(), true);
-        }
-        
-        return $entities;
     }
 }

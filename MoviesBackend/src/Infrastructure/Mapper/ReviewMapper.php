@@ -36,12 +36,22 @@ class ReviewMapper extends AbstractDataMapper
     public function toModel(Review $reviewEntity): ?ReviewModel
     {
         $movieModel = $this->moviesRepository->findById($reviewEntity->getMovies()->getId());
+
+        $userModel = new UserModel(
+            $reviewEntity->getUser()->getUsername(), 
+            $reviewEntity->getUser()->getEmail(), 
+            $reviewEntity->getUser()->getRoles(), 
+            $reviewEntity->getUser()->getId()
+        );
+        $userModel->setPassword($reviewEntity->getUser()->getPassword());
+
         $review = new ReviewModel(
             $reviewEntity->getTitle(), 
             $reviewEntity->getParagraph(), 
             $reviewEntity->getPostingDate(), 
             $reviewEntity->getScore(),
             $movieModel,
+            $userModel,
             $reviewEntity->getId()
         );
 

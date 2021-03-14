@@ -11,4 +11,9 @@ class GenreMapper extends AbstractDataMapper
     {
         return new GenreModel($genreEntity->getName(), $genreEntity->getId());
     }
+
+    public function toEntity(GenreModel $genreModel): ?Genre
+    {
+        return new Genre($genreModel->getName(), $genreModel->getId());
+    }
 }

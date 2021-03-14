@@ -4,14 +4,14 @@ namespace App\Infrastructure\Mapper;
 
 abstract class AbstractDataMapper
 {
-    public function toArrayModel(array $moviesEntity): array
+    public function toArrayModel(array $entities): array
     {
-        $moviesModel = [];
+        $models = [];
 
-        foreach($moviesEntity as $movie){
-            $moviesModel[] = $this->toModel($movie);
+        foreach($entities as $entity){
+            $models[] = $this->toModel($entity);
         }
         
-        return $moviesModel;
+        return $models;
     }
 }
