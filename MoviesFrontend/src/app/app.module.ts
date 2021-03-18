@@ -4,6 +4,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent, FooterComponent} from './shared/layout'
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HeaderComponent, FooterComponent} from './shared/layout'
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
