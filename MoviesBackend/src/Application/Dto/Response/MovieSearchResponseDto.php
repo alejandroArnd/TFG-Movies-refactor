@@ -10,6 +10,8 @@ class MovieSearchResponseDto
 
     public string $accessiblePath;
 
+    public float $avarageScore;
+
 
     public function getId(): int
     {
@@ -39,5 +41,15 @@ class MovieSearchResponseDto
     public function setAccessiblePath($accessiblePath): void
     {
         $this->accessiblePath = $accessiblePath;
+    }
+
+    public function getAvarageScore(): float
+    {
+        return $this->avarageScore;
+    }
+
+    public function setAvarageScore($avarageScore): void
+    {
+        $this->avarageScore = $avarageScore;
     }
 }

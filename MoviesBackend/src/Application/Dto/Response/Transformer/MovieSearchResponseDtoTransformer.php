@@ -9,9 +9,10 @@ class MovieSearchResponseDtoTransformer extends ResponseDtoTransformer
     public function transformFromObject($movie): MovieSearchResponseDto
     {
         $dto = new MovieSearchResponseDto();
-        $dto->setId($movie->getId());
-        $dto->setTitle($movie->getTitle());
-        $dto->setAccessiblePath($movie->getAccessiblePath());
+        $dto->setId($movie->movie->getId());
+        $dto->setTitle($movie->movie->getTitle());
+        $dto->setAccessiblePath($movie->movie->getAccessiblePath());
+        $dto->setAvarageScore($movie->averageScore);
 
         return $dto;
     }

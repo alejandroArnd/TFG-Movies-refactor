@@ -54,6 +54,26 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
         return $searchResponse;
     }
 
+    public function findPopularMovies(): array
+    {
+        $queryBuilder = $this->createQueryBuilder('m');
+        $movies = $queryBuilder
+            ->select('m', $queryBuilder->expr()->avg('review.score'))
+            ->innerJoin('m.reviews','review')
+            ->groupBy('m.id')
+            ->orderBy($queryBuilder->expr()->avg('review.score'), 'ASC')
+            ->getQuery()
+            ->getResult();
+
+        $moviesModel=[];
+
+        foreach($movies as $movie){
+            $moviesModel[] = (object)['movie' => $this->movieMapper->toModel($movie[0]), 'averageScore' => $movie[1]];
+        }
+        return $moviesModel;
+
+    }
+
     private function update($movieModel)
     {
         $movieFound = $this->find($movieModel->getId());

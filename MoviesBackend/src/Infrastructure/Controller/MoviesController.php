@@ -11,8 +11,9 @@ use App\Application\Service\ValidatorMovieService;
 use App\Application\UseCases\Movies\FindAllMovies;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Application\UseCases\Movies\SoftDeleteMovie;
-use App\Application\UseCases\Movies\FindMoviesBySeveralCriterias;
+use App\Application\UseCases\Movies\FindPopularMovies;
 use App\Application\UseCases\Movies\FindOneMovieByTitle;
+use App\Application\UseCases\Movies\FindMoviesBySeveralCriterias;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MoviesController extends AbstractController{
@@ -24,6 +25,7 @@ class MoviesController extends AbstractController{
     private FindMoviesBySeveralCriterias $findMoviesBySeveralCriterias;
     private UpdateMovie $updateMovie;
     private FindOneMovieByTitle $findOneMoviesByTitle;
+    private FindPopularMovies $findPopularMovies;
 
     public function __construct(
         FindAllMovies $findAllMovies, 
@@ -32,7 +34,8 @@ class MoviesController extends AbstractController{
         FindMoviesBySeveralCriterias $findMoviesBySeveralCriterias,
         FindOneMovieByTitle $findOneMoviesByTitle,
         UpdateMovie $updateMovie,
-        ValidatorMovieService $validatorMovie
+        ValidatorMovieService $validatorMovie,
+        FindPopularMovies $findPopularMovies
     ){
         $this->findAllMovies = $findAllMovies;
         $this->createMovie = $createMovie;
@@ -41,6 +44,7 @@ class MoviesController extends AbstractController{
         $this->findOneMoviesByTitle = $findOneMoviesByTitle;
         $this->updateMovie = $updateMovie;
         $this->validatorMovie = $validatorMovie;
+        $this->findPopularMovies = $findPopularMovies;
     }
 
     /**
@@ -116,6 +120,15 @@ class MoviesController extends AbstractController{
             $messageError = ['message' => $exception->getMessage(), 'status' => $exception->getCode()];
             return new JsonResponse($messageError, $exception->getCode());
         }
+    }
+
+    /**
+     * @Route("/api/movies/most/popular", methods={"GET"})
+     */
+    public function findPopularMovies (): JsonResponse
+    {
+        $movies = $this->findPopularMovies->handle();
+        return new JsonResponse($movies, JsonResponse::HTTP_OK);
     }
     
 }
