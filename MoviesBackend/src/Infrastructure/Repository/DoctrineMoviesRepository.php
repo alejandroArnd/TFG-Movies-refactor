@@ -62,6 +62,7 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
             ->innerJoin('m.reviews','review')
             ->groupBy('m.id')
             ->orderBy($queryBuilder->expr()->avg('review.score'), 'ASC')
+            ->setMaxResults(10)
             ->getQuery()
             ->getResult();
 
