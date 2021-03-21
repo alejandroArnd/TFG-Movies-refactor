@@ -27,7 +27,7 @@ final class Version20210320161221 extends AbstractMigration
         foreach($movies as $movie){
             $movieObject = (object)[
                 'title' => $movie->getAttribute('title'), 
-                'overview' => $movie->getElementsByTagName('overview')->item(0)->nodeValue,
+                'overview' => str_replace(["              ", "          "], " ", $movie->getElementsByTagName('overview')->item(0)->getAttribute('text')),
                 'releaseDate' => $movie->getAttribute('releaseDate'),
                 'duration' => $movie->getAttribute('duration'),
                 'image' => base64_encode(file_get_contents($movie->getElementsByTagName('image')->item(0)->getAttribute('path')))

@@ -8,8 +8,249 @@
             <genre name = "Sci-Fi"></genre>
         </genres>
         <image path = "https://m.media-amazon.com/images/M/MV5BYjI3NDg0ZTEtMDEwYS00YWMyLThjYjktMTNlM2NmYjc1OGRiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
-        <overview>
-            Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions. The task proves more difficult than Bruce imagined, as each of the recruits must face the demons of their own pasts to transcend that which has held them back, allowing them to come together, finally forming an unprecedented league of heroes. Now united, Batman, Wonder Woman, Aquaman, Cyborg and The Flash may be too late to save the planet from Steppenwolf, DeSaad and Darkseid and their dreadful intentions.
+        <overview text = "Determined to ensure Superman's ultimate sacrifice was not in vain, 
+        Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of 
+        metahumans to protect the world from an approaching threat of catastrophic proportions. 
+        The task proves more difficult than Bruce imagined, as each of the recruits must face 
+        the demons of their own pasts to transcend that which has held them back, allowing them to come together, 
+        finally forming an unprecedented league of heroes. Now united, Batman, Wonder Woman, Aquaman, Cyborg and The Flash 
+        may be too late to save the planet from Steppenwolf, DeSaad and Darkseid and their dreadful intentions.">
+        </overview>
+    </movie>
+    <movie title ="Joker" releaseDate = "2019-10-04" duration = "7320">
+        <genres>
+            <genre name = "Crime"></genre>
+            <genre name = "Drama"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Arthur Fleck works as a clown and is an aspiring stand-up comic. 
+        He has mental health issues, part of which involves uncontrollable laughter. 
+        Times are tough and, due to his issues and occupation, Arthur has an even worse time than most. 
+        Over time these issues bear down on him, shaping his actions, making him ultimately take on the persona he is more known as...Joker.">
+        </overview>
+    </movie>
+    <movie title ="Avengers: Endgame" releaseDate = "2019-04-26" duration = "10860">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Drama"></genre>
+            <genre name = "Sci-Fi"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins due to the efforts of the Mad Titan, Thanos. 
+            With the help of remaining allies, the Avengers must assemble once more in order to undo 
+            Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face...">
+        </overview>
+    </movie>
+    <movie title ="Deadpool 2" releaseDate = "2018-05-18" duration = "7140">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Comedy"></genre>
+            <genre name = "Sci-Fi"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "After losing Vanessa (Morena Baccarin), the love of his life, 4th-wall breaking mercenary 
+        Wade Wilson aka Deadpool (Ryan Reynolds) must assemble a team and protect a young, 
+        full-figured mutant Russell Collins aka Firefist (Julian Dennison) from Cable (Josh Brolin), a no-nonsense, 
+        dangerous cyborg from the future, and must also learn the most important lesson of all: to be part of a family again.">
+        </overview>
+    </movie>
+    <movie title ="Blade Runner 2049" releaseDate = "2017-10-06" duration = "9720">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Drama"></genre>
+            <genre name = "Mystery"></genre>
+            <genre name = "Sci-Fi"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Thirty years after the events of Blade Runner (1982), a new Blade Runner, L.A.P.D. Officer K (Ryan Gosling), unearths a 
+        long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard 
+        (Harrison Ford), a former L.A.P.D. Blade Runner, who has been missing for thirty years.">
+        </overview>
+    </movie>
+    <movie title ="Raya and the Last Dragon" releaseDate = "2021-03-05" duration = "6420">
+        <genres>
+            <genre name = "Animation"></genre>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. However, 
+        when sinister monsters known as the Druun threatened the land, the dragons sacrificed themselves to save humanity. Now, 500 years later, 
+        those same monsters have returned, and it's up to a lone warrior to track down the last dragon and stop the Druun for good. ">
+        </overview>
+    </movie>
+    <movie title ="Interstellar" releaseDate = "2014-11-07" duration = "10140">
+        <genres>
+            <genre name = "Sci-Fi"></genre>
+            <genre name = "Drama"></genre>
+            <genre name = "Adventure"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Earth's future has been riddled by disasters, famines, and droughts. 
+        There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole 
+        in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet 
+        that may have the right environment to sustain human life">
+        </overview>
+    </movie>
+    <movie title ="The Lord of the Rings: The Fellowship of the Ring" releaseDate = "2001-12-19" duration = "10140">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Drama"></genre>
+            <genre name = "Adventure"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo. When Gandalf 
+        discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to the Cracks of Doom in order to destroy it. 
+        However, he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir, 
+        and his three Hobbit friends Merry, Pippin, and Samwise. Through mountains, snow, darkness, forests, rivers and plains, 
+        facing evil and danger at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end 
+        of the Dark Lords reign.">
+        </overview>
+    </movie>
+    <movie title ="Godzilla vs. Kong" releaseDate = "2021-04-31" duration = "6780">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Sci-Fi"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Legends collide as Godzilla and Kong, the two most powerful forces of nature, clash on the big screen in a 
+        spectacular battle for the ages. As a squadron embarks on a perilous mission into fantastic uncharted terrain, 
+        unearthing clues to the Titans' very origins and mankind's survival, a conspiracy threatens to wipe the creatures, 
+        both good and bad, from the face of the earth forever.">
+        </overview>
+    </movie>
+    <movie title ="Harry Potter and the Sorcerer's Stone" releaseDate = "2001-11-16" duration = "9120">
+        <genres>
+            <genre name = "Adventure"></genre>
+            <genre name = "Family"></genre>
+            <genre name = "Fantasy"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "This is the tale of Harry Potter (Daniel Radcliffe), an ordinary eleven-year-old boy serving as a 
+        sort of slave for his aunt and uncle who learns that he is actually a wizard and has been invited to attend the Hogwarts School for Witchcraft and Wizardry. 
+        Harry is snatched away from his mundane existence by Rubeus Hagrid (Robbie Coltrane), 
+        the groundskeeper for Hogwarts, and quickly thrown into a world completely foreign to both him and the viewer. 
+        Famous for an incident that happened at his birth, Harry makes friends easily at his new school. He soon finds, however, that 
+        the wizarding world is far more dangerous for him than he would have imagined, and he quickly learns that not all wizards are ones to be trusted. ">
+        </overview>
+    </movie>
+    <movie title ="Parasite" releaseDate = "2019-11-08" duration = "7920">
+        <genres>
+            <genre name = "Comedy"></genre>
+            <genre name = "Drama"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "The Kims - mother and father Chung-sook and Ki-taek, and their young adult offspring, son Ki-woo and daughter Ki-jung - are a poor 
+        family living in a shabby and cramped half basement apartment in a busy lower working class commercial district of Seoul. 
+        Without even knowing it, they, especially Mr. and Mrs. Kim, literally smell of poverty. 
+        Often as a collective, they perpetrate minor scams to get by, and even when they have jobs, they do the minimum work required. 
+        Ki-woo is the one who has dreams of getting out of poverty by one day going to university. 
+        Despite not having that university education, Ki-woo is chosen by his university student friend Min, who is leaving 
+        to go to school, to take over his tutoring job to Park Da-hye, who Min plans to date once he returns to Seoul and she herself is in university. 
+        The Parks are a wealthy family who for four years have lived in their modernistic house designed by and the former residence of famed architect Namgoong.">
+        </overview>
+    </movie>
+    <movie title ="Pacific Rim" releaseDate = "2013-07-12" duration = "7860">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Sci-Fi"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTY3MTI5NjQ4Nl5BMl5BanBnXkFtZTcwOTU1OTU0OQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "When monstrous creatures, known as Kaiju, started rising from the sea, a war began that would take millions of 
+        lives and consume humanity's resources for years on end. To combat the giant Kaiju, a special type of weapon was 
+        devised: massive robots, called Jaegers, which are controlled simultaneously by two pilots whose minds are locked in a neural bridge. 
+        But even the Jaegers are proving nearly defenseless in the face of the relentless Kaiju. On the verge of defeat, the forces 
+        defending mankind have no choice but to turn to two unlikely heroes - a washed up former pilot (Charlie Hunnam) and an 
+        untested trainee (Rinko Kikuchi) - who are teamed to drive a legendary but seemingly obsolete Jaeger from the past. 
+        Together, they stand as mankind's last hope against the mounting apocalypse.">
+        </overview>
+    </movie>
+    <movie title ="Tenet" releaseDate = "2020-09-03" duration = "9000">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Thriller"></genre>
+            <genre name = "Sci-Fi"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "In a twilight world of international espionage, an unnamed CIA operative, known as The Protagonist, 
+        is recruited by a mysterious organization called Tenet to participate in a global assignment that unfolds beyond real time. 
+        The mission: prevent Andrei Sator, a renegade Russian oligarch with precognition abilities, from starting World War III. 
+        The Protagonist will soon master the art of time inversion as a way of countering the threat that is to come. ">
+        </overview>
+    </movie>
+    <movie title ="Alita: Battle Angel" releaseDate = "2019-02-14" duration = "7320">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Sci-Fi"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTQzYWYwYjctY2JhZS00NTYzLTllM2UtZWY5ZTk0NmYwYzIyXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = " Alita is a creation from an age of despair. Found by the mysterious Dr. Ido while trolling for cyborg parts, 
+        Alita becomes a lethal, dangerous being. She cannot remember who she is, or where she came from. But to Dr. Ido, the truth is all too clear. 
+        She is the one being who can break the cycle of death and destruction left behind from Tiphares. But to accomplish her true purpose, 
+        she must fight and kill. And that is where Alita's true significance comes to bear. She is an angel from heaven. She is an angel of death.">
+        </overview>
+    </movie>
+    <movie title ="John Wick" releaseDate = "2014-10-24" duration = "6060">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Crime"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "With the untimely death of his beloved wife still bitter in his mouth, John Wick, the expert former assassin, receives one 
+        final gift from her--a precious keepsake to help John find a new meaning in life now that she is gone. But when the arrogant Russian mob prince, 
+        Iosef Tarasov, and his men pay Wick a rather unwelcome visit to rob him of his prized 1969 Mustang and his wife's present, the legendary hitman 
+        will be forced to unearth his meticulously concealed identity. Blind with revenge, John will immediately unleash a carefully orchestrated maelstrom 
+        of destruction against the sophisticated kingpin, Viggo Tarasov, and his family, who are fully aware of his lethal capacity. Now, only blood can 
+        quench the boogeyman's thirst for retribution.">
+        </overview>
+    </movie>
+    <movie title ="John Wick: Chapter 3 - Parabellum" releaseDate = "2019-05-17" duration = "7800">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Crime"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "In this third installment of the adrenaline-fueled action franchise, skilled assassin John Wick (Keanu Reeves) 
+        returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the 
+        shadowy international assassin's guild, the High Table, John Wick is excommunicado, but the world's most ruthless hit men and women await his every turn.">
+        </overview>
+    </movie>
+    <movie title ="John Wick: Chapter 2" releaseDate = "2017-02-10" duration = "7320">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Crime"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Bound by an inescapable blood debt to the Italian crime lord, Santino D'Antonio, and with his precious 1969 Mustang still stolen,
+         John Wick--the taciturn and pitiless assassin who thirsts for seclusion--is forced to visit Italy to honour his promise. But, soon, the 
+         Bogeyman will find himself dragged into an impossible task in the heart of Rome's secret criminal society, as every killer in the business 
+         dreams of cornering the legendary Wick who now has an enormous price on his head. Drenched in blood and mercilessly hunted down, John Wick
+          can surely forget a peaceful retirement as no one can make it out in one piece">
+        </overview>
+    </movie>
+    <movie title ="John Wick: Chapter 2" releaseDate = "2017-02-10" duration = "7320">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Crime"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Bound by an inescapable blood debt to the Italian crime lord, Santino D'Antonio, and with his precious 1969 Mustang still stolen,
+         John Wick--the taciturn and pitiless assassin who thirsts for seclusion--is forced to visit Italy to honour his promise. But, soon, the 
+         Bogeyman will find himself dragged into an impossible task in the heart of Rome's secret criminal society, as every killer in the business 
+         dreams of cornering the legendary Wick who now has an enormous price on his head. Drenched in blood and mercilessly hunted down, John Wick
+          can surely forget a peaceful retirement as no one can make it out in one piece">
         </overview>
     </movie>
 </movies>
