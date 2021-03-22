@@ -13,10 +13,22 @@ final class Version20210320161221 extends AbstractMigration
 {
     public function getDescription() : string
     {
-        return 'Insert several rows in movie table';
+        return 'Add unique index and insert several rows in movie table';
     }
 
     public function up(Schema $schema) : void
+    {
+        $table = $schema->getTable('movies');
+        $table->addUniqueIndex(['title'], "uniq_title");
+    }
+
+    public function down(Schema $schema) : void
+    {
+        $table = $schema->getTable('movies');
+        $table->dropIndex("uniq_title");
+    }
+
+    public function postUp(Schema $schema): void
     {
         $doc = new DOMDocument();
         $manageFile = new ManageUploadFileService();
@@ -48,7 +60,7 @@ final class Version20210320161221 extends AbstractMigration
         }
     }
 
-    public function down(Schema $schema) : void
+    public function postDown(Schema $schema): void
     {
         $doc = new DOMDocument();
         $doc->load('/var/www/html/migrations/data/moviesData.xml');
