@@ -54,7 +54,7 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
         return $searchResponse;
     }
 
-    public function findPopularMovies(): array
+    public function findTopRatedMovies(): array
     {
         $queryBuilder = $this->createQueryBuilder('m');
         $movies = $queryBuilder

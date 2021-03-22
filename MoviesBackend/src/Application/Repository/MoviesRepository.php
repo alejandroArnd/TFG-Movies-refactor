@@ -10,7 +10,7 @@ interface MoviesRepository
     
     public function getAll(): array;
 
-    public function findPopularMovies(): array;
+    public function findTopRatedMovies(): array;
 
     public function findById(int $id): ?MoviesModel;
 

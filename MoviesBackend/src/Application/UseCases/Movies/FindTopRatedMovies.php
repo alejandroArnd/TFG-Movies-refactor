@@ -5,7 +5,7 @@ namespace App\Application\UseCases\Movies;
 use App\Application\Repository\MoviesRepository;
 use App\Application\Dto\Response\Transformer\MovieSearchResponseDtoTransformer;
 
-class FindPopularMovies
+class FindTopRatedMovies
 {
     private MoviesRepository $moviesRepository;
     private MovieSearchResponseDtoTransformer $movieResponseDtoTransformer;
@@ -18,7 +18,7 @@ class FindPopularMovies
 
     public function handle(): array
     {
-        $movies = $this->moviesRepository->findPopularMovies();
+        $movies = $this->moviesRepository->findTopRatedMovies();
         return $this->movieResponseDtoTransformer->transformFromObjects($movies);
     }
 }
