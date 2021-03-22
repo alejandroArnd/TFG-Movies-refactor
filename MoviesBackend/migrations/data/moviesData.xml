@@ -111,7 +111,7 @@
         of the Dark Lords reign.">
         </overview>
     </movie>
-    <movie title ="Godzilla vs. Kong" releaseDate = "2021-04-31" duration = "6780">
+    <movie title ="Godzilla vs. Kong" releaseDate = "2021-03-31" duration = "6780">
         <genres>
             <genre name = "Action"></genre>
             <genre name = "Sci-Fi"></genre>
@@ -239,18 +239,427 @@
           can surely forget a peaceful retirement as no one can make it out in one piece">
         </overview>
     </movie>
-    <movie title ="John Wick: Chapter 2" releaseDate = "2017-02-10" duration = "7320">
+    <movie title ="It" releaseDate = "2017-09-08" duration = "8100">
+        <genres>
+            <genre name = "Horror"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BZDVkZmI0YzAtNzdjYi00ZjhhLWE1ODEtMWMzMWMzNDA0NmQ4XkEyXkFqcGdeQXVyNzYzODM3Mzg@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "In the Town of Derry, the local kids are disappearing one by one. In a place known as 'The Barrens',
+         a group of seven kids are united by their horrifying and strange encounters with an evil clown and their determination to kill It.">
+        </overview>
+    </movie>
+    <movie title ="1917" releaseDate = "2020-01-10" duration = "7140">
+        <genres>
+            <genre name = "Drama"></genre>
+            <genre name = "Thriller"></genre>
+            <genre name = "War"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "April 1917, the Western Front. Two British soldiers are sent to deliver an urgent message to an isolated regiment. 
+        If the message is not received in time the regiment will walk into a trap and be massacred. To get to the regiment they will 
+        need to cross through enemy territory. Time is of the essence and the journey will be fraught with danger.">
+        </overview>
+    </movie>
+    <movie title ="Harry Potter and the Order of the Phoenix" releaseDate = "2007-07-11" duration = "8280">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Fantasy"></genre>
+            <genre name = "Mystery"></genre>
+            <genre name = "Family"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTM0NTczMTUzOV5BMl5BanBnXkFtZTYwMzIxNTg3._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "After a lonely summer on Privet Drive, Harry (Daniel Radcliffe) returns to a Hogwarts full of ill-fortune. 
+        Few of students and parents believe him or Dumbledore (Sir Michael Gambon) that Voldemort (Ralph Fiennes) is really back. 
+        The ministry had decided to step in by appointing a new Defense Against the Dark Arts teacher, Professor Dolores Umbridge (Imelda Staunton), 
+        who proves to be the nastiest person Harry has ever encountered. Harry also can't help stealing glances with the beautiful Cho Chang (Katie Leung). 
+        To top it off are dreams that Harry can't explain, and a mystery behind something for which Voldemort is searching. With these many things, 
+        Harry begins one of his toughest years at Hogwarts School of Witchcraft and Wizardry.">
+        </overview>
+    </movie>
+    <movie title ="Wonder Woman 1984" releaseDate = "2020-12-25" duration = "9060">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Fantasy"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "In 1984, after saving the world in Wonder Woman (2017), the immortal Amazon warrior, Princess Diana of Themyscira, 
+        finds herself trying to stay under the radar, working as an archaeologist at the Smithsonian Museum. With the memory of the brave U.S. pilot,
+         Captain Steve Trevor, etched on her mind, Diana Prince becomes embroiled in a sinister conspiracy of global proportions when a transparent, 
+         golden-yellow citrine gemstone catches the eye of the power-hungry entrepreneur, Maxwell Lord. Now, as a dear old friend from the past miraculously 
+         enters the picture, and Barbara Minerva, Diana's insecure gemologist colleague gives in to desire, suddenly, deceit, greed, and false promises catapult 
+         Maxwell into the limelight. More and more, cataclysmic events push the world to the brink, and emotionally vulnerable Diana must address a cruel dilemma. 
+         Can mighty Wonder Woman save humankind once again? ">
+        </overview>
+    </movie>
+    <movie title ="Harry Potter and the Half-Blood Prince" releaseDate = "2009-07-15" duration = "9180">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Family"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BNzU3NDg4NTAyNV5BMl5BanBnXkFtZTcwOTg2ODg1Mg@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "In Harry Potter's (Daniel Radcliffe's) sixth year at Hogwarts School of Witchcraft, he finds a book marked mysteriously, 
+        This book is the property of the Half Blood Prince, which helps him excel at Potions class and teaches him a few dark and dangerous ones along 
+        the way. Meanwhile, Harry is taking private lessons with Dumbledore (Sir Michael Gambon) in order to find out about Voldemort's (Ralph Fiennes') 
+        past so they can find out what might be his only weakness.">
+        </overview>
+    </movie>
+    <movie title ="Harry Potter and the Deathly Hallows: Part 1" releaseDate = "2010-11-19" duration = "8760">
+        <genres>
+            <genre name = "Fantasy"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Family"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = " Voldemort's (Ralph Fiennes') power is growing stronger. He now has control over the Ministry of Magic and Hogwarts. 
+        Harry (Daniel Radcliffe), Ron (Rupert Grint), and Hermione (Emma Watson) decide to finish Dumbledore's (Sir Michael Gambon's) work and find 
+        the rest of the Horcruxes to defeat the Dark Lord. But little hope remains for the trio, and the rest of the Wizarding World, 
+        so everything they do must go as planned.">
+        </overview>
+    </movie>
+    <movie title ="Harry Potter and the Chamber of Secrets" releaseDate = "2002-11-15" duration = "9660">
+        <genres>
+            <genre name = "Fantasy"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Family"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTcxODgwMDkxNV5BMl5BanBnXkFtZTYwMDk2MDg3._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Forced to spend his summer holidays with his muggle relations, Harry Potter (Daniel Radcliffe) gets a real shock when 
+        he gets a surprise visitor: Dobby (Toby Jones) the house-elf, who warns Harry against returning to Hogwarts, for terrible things are going 
+        to happen. Harry decides to ignore Dobby's warning and continues with his pre-arranged schedule. But at Hogwarts, strange and terrible 
+        things are indeed happening. Harry is suddenly hearing mysterious voices from inside the walls, muggle-born students are being attacked, 
+        and a message scrawled on the wall in blood puts everyone on his or her guard, The Chamber Of Secrets Has Been Opened. Enemies Of The Heir, Beware.">
+        </overview>
+    </movie>
+    <movie title ="Harry Potter and the Prisoner of Azkaban" releaseDate = "2004-06-04" duration = "8520">
+        <genres>
+            <genre name = "Fantasy"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Family"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Harry Potter (Daniel Radcliffe) is having a tough time with his relatives (yet again). He runs away after using magic to 
+        inflate Uncle Vernon's (Richard Griffiths') sister Marge (Pam Ferris), who was being offensive towards Harry's parents. Initially scared 
+        for using magic outside the school, he is pleasantly surprised that he won't be penalized after all. However, he soon learns that a dangerous 
+        criminal and Voldemort's trusted aide Sirius Black (Gary Oldman) has escaped from Azkaban Prison and wants to kill Harry to avenge the Dark Lord. 
+        To worsen the conditions for Harry, vile creatures called Dementors are appointed to guard the school gates and inexplicably happen to 
+        have the most horrible effect on him. Little does Harry know that by the end of this year, many holes in his past (whatever he knows of it) 
+        will be filled up and he will have a clearer vision of what the future has in store.">
+        </overview>
+    </movie>
+    <movie title ="Harry Potter and the Goblet of Fire" releaseDate = "2005-11-18" duration = "9420">
+        <genres>
+            <genre name = "Fantasy"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Family"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTI1NDMyMjExOF5BMl5BanBnXkFtZTcwOTc4MjQzMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Harry's (Daniel Radcliffe's) fourth year at Hogwarts is about to start and he is enjoying the summer vacation with his friends. 
+        They get the tickets to The Quidditch World Cup Final, but after the match is over, people dressed like Lord Voldemort's (Ralph Fiennes') Death Eaters 
+        set a fire to all of the visitors' tents, coupled with the appearance of Voldemort's symbol, the Dark Mark in the sky, which causes a 
+        frenzy across the magical community. That same year, Hogwarts is hosting The Triwizard Tournament, a magical tournament between three 
+        well-known schools of magic : Hogwarts, Beauxbatons, and Durmstrang. The contestants have to be above the age of seventeen, and are 
+        chosen by a magical object called The Goblet of Fire. On the night of selection, however, the Goblet spews out four names instead of 
+        the usual three, with Harry unwittingly being selected as the Fourth Champion. Since the magic cannot be reversed, 
+        Harry is forced to go with it and brave three exceedingly">
+        </overview>
+    </movie>
+    <movie title ="Harry Potter and the Deathly Hallows: Part 2" releaseDate = "2011-07-15" duration = "7800">
+        <genres>
+            <genre name = "Drama"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Family"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Harry (Daniel Radcliffe), Ron (Rupert Grint), and Hermione (Emma Watson) continue their quest 
+        of finding and destroying Voldemort's (Ralph Fiennes') three remaining Horcruxes, the magical items responsible 
+        for his immortality. But as the mystical Deathly Hallows are uncovered, and Voldemort finds out about their mission, 
+        he biggest battle begins, and life as they know it will never be the same again.">
+        </overview>
+    </movie>
+    <movie title ="Jurassic Park" releaseDate = "1993-06-11" duration = "7620">
+        <genres>
+            <genre name = "Sci-Fi"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Action"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = " Huge advancements in scientific technology have enabled a mogul to create an island full of living dinosaurs. 
+        John Hammond has invited four individuals, along with his two grandchildren, to join him at Jurassic Park. But will everything go 
+        according to plan? A park employee attempts to steal dinosaur embryos, critical security systems are shut down and it now becomes a 
+        race for survival with dinosaurs roaming freely over the island.">
+        </overview>
+    </movie>
+    <movie title ="Spider-Man: Far from Home" releaseDate = "2019-07-02" duration = "7620">
+        <genres>
+            <genre name = "Sci-Fi"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Action"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMGZlNTY1ZWUtYTMzNC00ZjUyLWE0MjQtMTMxN2E3ODYxMWVmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Our friendly neighborhood Super Hero decides to join his best friends Ned, MJ, and the rest of the gang on a European vacation. 
+        However, Peter's plan to leave super heroics behind for a few weeks are quickly scrapped when he begrudgingly agrees to help Nick Fury uncover 
+        the mystery of several elemental creature attacks, creating havoc across the continent.">
+        </overview>
+    </movie>
+    <movie title ="Zombieland: Double Tap" releaseDate = "2019-10-18" duration = "5940">
+        <genres>
+            <genre name = "Comedy"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Action"></genre>
+            <genre name = "Horror"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BYjcwNjZhNGYtOGNlNy00NGI3LTlmODMtMGZlMjA3YjA0Njg0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "One long decade after the post-apocalyptic events in Zombieland (2009), the resilient quartet of survivors--the tough-as-nails 
+        zombie exterminator, Tallahassee; his rule-making comrade, Columbus; the free-spirited huntress, Wichita, and her younger sister, 
+        Little Rock--find themselves in the bosom of a now-derelict White House. However, in a rabid world still overrun by multitudes of 
+        walking dead and mutated strains of evolved animated corpses, a premeditated separation will send the team back to square one, searching, 
+        once more, for the promised land. Now, all hope rests on Babylon: an entirely organic commune of blissful vegetarian pacifists who love to party. 
+        Is this the end of the road?">
+        </overview>
+    </movie>
+    <movie title ="Avatar" releaseDate = "2009-12-18" duration = "9720">
+        <genres>
+            <genre name = "Adventure"></genre>
+            <genre name = "Action"></genre>
+            <genre name = "Fantasy"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "When his brother is killed in a robbery, paraplegic Marine Jake Sully decides to take his place in a mission on the distant 
+        world of Pandora. There he learns of greedy corporate figurehead Parker Selfridge's intentions of driving off the native humanoid Na'vi in order 
+        to mine for the precious material scattered throughout their rich woodland. In exchange for the spinal surgery that will fix his legs, Jake gathers 
+        knowledge, of the Indigenous Race and their Culture, for the cooperating military unit spearheaded by gung-ho Colonel Quaritch, while simultaneously 
+        attempting to infiltrate the Na'vi people with the use of an avatar identity. While Jake begins to bond with the native tribe 
+        and quickly falls in love with the beautiful alien Neytiri, the restless Colonel moves forward with his ruthless extermination 
+        tactics, forcing the soldier to take a stand - and fight back in an epic battle for the fate of Pandora.">
+        </overview>
+    </movie>
+    <movie title ="Kong: Skull Island" releaseDate = "2017-03-10" duration = "7080">
+        <genres>
+            <genre name = "Adventure"></genre>
+            <genre name = "Action"></genre>
+            <genre name = "Fantasy"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BZDg0OGM1NWEtNDEwOC00OTE2LTliZWEtNzg1MTZkNjFlMmNhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "A washed up monster chaser convinces the U.S. Government to fund a trip to an unexplored island in the South Pacific. 
+        Under the guise of geological research, the team travels to Skull Island. Upon arrival, the group discover that their mission may 
+        be complicated by the wildlife which inhabits the island. The beautiful vistas and deadly creatures create a visually stunning experience 
+        that is sure to keep your attention.">
+        </overview>
+    </movie>
+    <movie title ="Spider-Man: Homecoming" releaseDate = "2017-07-07" duration = "7980">
+        <genres>
+            <genre name = "Adventure"></genre>
+            <genre name = "Action"></genre>
+            <genre name = "Sci-Fi"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BNTk4ODQ1MzgzNl5BMl5BanBnXkFtZTgwMTMyMzM4MTI@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "A young Peter Parker/Spider-Man begins to navigate his newfound identity as the web-slinging super hero Spider-Man. 
+        Thrilled by his experience with the Avengers, Peter returns home, where he lives with his Aunt May, under the watchful eye of his new mentor Tony Stark. 
+        Peter tries to fall back into his normal daily routine - distracted by thoughts of proving himself to be more than just your friendly 
+        neighborhood Spider-Man - but when the Vulture emerges as a new villain, everything that Peter holds most important will be threatened.">
+        </overview>
+    </movie>
+    <movie title ="Godzilla: King of the Monsters" releaseDate = "2019-05-31" duration = "7920">
+        <genres>
+            <genre name = "Adventure"></genre>
+            <genre name = "Action"></genre>
+            <genre name = "Fantasy"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BOGFjYWNkMTMtMTg1ZC00Y2I4LTg0ZTYtN2ZlMzI4MGQwNzg4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "The new story follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of 
+        god sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three headed King Ghidorah. 
+        When these ancient superspecies, thought to be mere myths, rise again, they all vie for supremacy, leaving humanity's 
+        very existence hanging in the balance.">
+        </overview>
+    </movie>
+    <movie title ="Spider-Man: Into the Spider-Verse" releaseDate = "2018-12-14" duration = "7020">
+        <genres>
+            <genre name = "Adventure"></genre>
+            <genre name = "Action"></genre>
+            <genre name = "Animation"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Phil Lord and Christopher Miller, the creative minds behind The Lego Movie and 21 Jump Street, bring their unique talents 
+        to a fresh vision of a different Spider-Man Universe, with a groundbreaking visual style that's the first of its kind. Spider-Man(TM): Into the Spider-Verse 
+        introduces Brooklyn teen Miles Morales (Shameik Moore), and the limitless possibilities of the Spider-Verse, where more than one can wear the mask.">
+        </overview>
+    </movie>
+    <movie title ="The Father" releaseDate = "2020-02-26" duration = "5820">
+        <genres>
+            <genre name = "Drama"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "A man refuses all assistance from his daughter as he ages. As he tries to make sense of his changing circumstances, he begins 
+        to doubt his loved ones, his own mind and even the fabric of his reality.">
+        </overview>
+    </movie>
+    <movie title ="Death on the Nile" releaseDate = "2021-09-17" duration = "8040">
+        <genres>
+            <genre name = "Drama"></genre>
+            <genre name = "Crime"></genre>
+            <genre name = "Mystery"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMjYzMWQ2NWQtZGJkOC00ZWYzLThhMmMtZDdmNGM4NzEyNmU1XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Belgian sleuth Hercule Poirot's vacation aboard a glamorous river steamer turns into a terrifying search for a murderer when a 
+        picture-perfect couple's idyllic honeymoon is tragically cut short. Set against an epic landscape of sweeping Egyptian desert vistas and the majestic 
+        Giza pyramids, this tale of unbridled passion and incapacitating jealousy features a cosmopolitan group of impeccably dressed travelers, 
+        and enough wicked twists and turns to leave audiences guessing until the final, shocking denouement.">
+        </overview>
+    </movie>
+    <movie title ="The Dry" releaseDate = "2021-05-21" duration = "7020">
+        <genres>
+            <genre name = "Drama"></genre>
+            <genre name = "Crime"></genre>
+            <genre name = "Mystery"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BM2U3NTU4ZTQtNTE0Ny00M2NmLWFhODUtNjYxMDZkZTY3ODZhXkEyXkFqcGdeQXVyODgyODk3MzU@._V1_UY268_CR116,0,182,268_AL_.jpg"></image>
+        <overview text = "Federal Agent Aaron Falk returns to his home town after an absence of over twenty years to attend the funeral of his childhood 
+        friend, Luke, who allegedly killed his wife and child before taking his own life - a victim of the madness that has ravaged this community after 
+        more than a decade of drought. When Falk reluctantly agrees to stay and investigate the crime, he opens up an old wound - the death of 17- year-old 
+        Ellie Deacon. Falk begins to suspect these two crimes, separated by decades, are connected. As he struggles to prove not only Luke's innocence but 
+        also his own, Falk finds himself pitted against the prejudice towards him and and pent-up rage of a terrified community.">
+        </overview>
+    </movie>
+    <movie title ="Black Widow" releaseDate = "2021-05-07" duration = "7980">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Sci-Fi"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMzFiODE0ZDUtN2IxNC00OTI5LTg4OWItZTE2MjU4ZTk2NjM5XkEyXkFqcGdeQXVyNDYzODU1ODM@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "At birth the Black Widow aka Natasha Romanova is given to the KGB, which grooms her to become 
+        its ultimate operative. When the U.S.S.R. breaks up, the government tries to kill her as the action moves to present-day 
+        New York, where she is a freelance operative.">
+        </overview>
+    </movie>
+    <movie title ="Fast and Furious 9" releaseDate = "2021-06-25" duration = "8700">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Crime"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BZDZlMjc0MTItZWY2YS00ZDJhLWI2M2MtODVjNWFmYTQxYmJjXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Cypher enlists the help of Jakob, Dom's younger brother to take revenge on Dom and his team.">
+        </overview>
+    </movie>
+    <movie title ="The Green Knight" releaseDate = "2021-07-30" duration = "7500">
+        <genres>
+            <genre name = "Fantasy"></genre>
+            <genre name = "Drama"></genre>
+            <genre name = "Horror"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BNWE1ZGE5Y2QtYWE4Yi00YjM0LThhNWYtMWM1OGJjNDU3YzMyXkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "An epic fantasy adventure based on the timeless Arthurian legend, The Green Knight tells the story of Sir Gawain (Dev Patel), 
+        King Arthur's reckless and headstrong nephew, who embarks on a daring quest to confront the eponymous Green Knight, a gigantic emerald-skinned 
+        stranger and tester of men. Gawain contends with ghosts, giants, thieves, and schemers in what becomes a deeper journey to define his character 
+        and prove his worth in the eyes of his family and kingdom by facing the ultimate challenger. From visionary filmmaker David Lowery comes a fresh 
+        and bold spin on a classic tale from the knights of the round table.">
+        </overview>
+    </movie>
+    <movie title ="No Time to Die" releaseDate = "2021-10-08" duration = "10080">
+        <genres>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BMTk3ZGM2YzQtMmYxYy00NDZjLWFmOTUtZTQwMzg0ZjA5ZjU3XkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Bond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter 
+        from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond 
+        onto the trail of a mysterious villain armed with dangerous new technology.">
+        </overview>
+    </movie>
+    <movie title ="Antlers" releaseDate = "2021-10-29" duration = "5940">
+        <genres>
+            <genre name = "Horror"></genre>
+            <genre name = "Mystery"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BY2UzODAyNjktN2MwYy00M2RkLThiOTEtMjU1MTgxY2EzM2YyXkEyXkFqcGdeQXVyODk5MDA0MDU@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "In an isolated Oregon town, a middle-school teacher and her sheriff brother become embroiled with her enigmatic student, 
+        whose dark secrets lead to terrifying encounters with a legendary ancestral creature who came before them.">
+        </overview>
+    </movie>
+    <movie title ="In the Heights" releaseDate = "2021-06-11" duration = "7200">
+        <genres>
+            <genre name = "Drama"></genre>
+            <genre name = "Music"></genre>
+            <genre name = "Musical"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BZDkzYmM5M2EtMjQxMS00ZDNiLTkwOWQtOTExZDdiMDIxNmQxXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "In the Heights centers on a variety of characters living in the neighborhood of Washington Heights, on the northern tip of Manhattan. 
+        At the center of the show is Usnavi, a bodega owner who looks after the aging Cuban lady next door, pines for the gorgeous girl working in the neighboring 
+        beauty salon and dreams of winning the lottery and escaping to the shores of his native Dominican Republic. Meanwhile, Nina, a childhood friend of Usnavi's, 
+        has returned to the neighborhood from her first year at college with surprising news for her parents, who have spent their life savings on building a better 
+        life for their daughter. Ultimately, Usnavi and the residents of the close-knit neighborhood get a dose of what it means to be home.">
+        </overview>
+    </movie>
+    <movie title ="The God Committee" releaseDate = "2021-06-10" duration = "5880">
+        <genres>
+            <genre name = "Thriller"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BN2U4Mjk0OTgtYThkZi00ZDNiLTgzZjUtZThkNjkwZjE4YWZiXkEyXkFqcGdeQXVyMTQ2MzgwNjE@._V1_UY268_CR162,0,182,268_AL_.jpg"></image>
+        <overview text = "An organ transplant committee has one hour to decide which of three patients deserves a life-saving heart. Seven years later, 
+        the committee members struggle with the consequences of that fateful decision.">
+        </overview>
+    </movie>
+    <movie title ="Silent Life" releaseDate = "2021-05-07" duration = "5760">
+        <genres>
+            <genre name = "Drama"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BNTBhOWM5MGEtOWYxNC00MDZkLWJkOGUtMTcxZTJmNzI4MDQ5XkEyXkFqcGdeQXVyMTkwNjcyOTk@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "The mysterious Lady in Black claiming to be the last love of the first screen sex symbol Rudolph Valentino, dies in her Hollywood apartment. 
+        The only contact the detective finds is the business card of the young filmmaker Paul Harts. While answering the investigator's questions, Paul brings us 
+        half a year earlier to the Hollywood Forever cemetery when he first met Lady in Black and convinced her to reveal her secret on camera. The story of the 
+        old lady takes us back in the past even further, to 1926, when she was a young nurse in NYC and met Rudolph Valentino on the hospital death bed.">
+        </overview>
+    </movie>
+    <movie title ="The Killing of Two Lovers" releaseDate = "2021-05-14" duration = "5100">
+        <genres>
+            <genre name = "Drama"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BZTliZWZiNTUtZjM5Yi00NTNiLTk0MzMtYjE1MTA2OTRmZDRmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "David desperately tries to keep his family of six together during a separation from his wife. They both agree to see other people but 
+        David struggles to grapple with his wife's new relationship.">
+        </overview>
+    </movie>
+    <movie title ="Vanquish" releaseDate = "2021-04-16" duration = "5760">
         <genres>
             <genre name = "Action"></genre>
             <genre name = "Crime"></genre>
             <genre name = "Thriller"></genre>
         </genres>
-        <image path = "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
-        <overview text = "Bound by an inescapable blood debt to the Italian crime lord, Santino D'Antonio, and with his precious 1969 Mustang still stolen,
-         John Wick--the taciturn and pitiless assassin who thirsts for seclusion--is forced to visit Italy to honour his promise. But, soon, the 
-         Bogeyman will find himself dragged into an impossible task in the heart of Rome's secret criminal society, as every killer in the business 
-         dreams of cornering the legendary Wick who now has an enormous price on his head. Drenched in blood and mercilessly hunted down, John Wick
-          can surely forget a peaceful retirement as no one can make it out in one piece">
+        <image path = "https://m.media-amazon.com/images/M/MV5BZWEzZDdjMjAtOWM1Zi00MTZkLWE5OTEtMDg2YmNmODFjOTBjXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "A mother, Victoria (Rose), is trying to put her dark past as a Russian drug courier behind her, but retired cop Damon (Freeman) 
+        forces Victoria to do his bidding by holding her daughter hostage. Now, Victoria must use guns, guts, and a motorcycle to take out a series of violent 
+        gangsters - or she may never see her child again.">
+        </overview>
+    </movie>
+    <movie title ="Minari" releaseDate = "2021-02-12" duration = "6900">
+        <genres>
+            <genre name = "Drama"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BNWEzOTNjNDgtZDhhYS00ODAxLWIzNGMtYjU3OGZhYmI3ZDU4XkEyXkFqcGdeQXVyMTAzNjk5MDI4._V1_UY268_CR1,0,182,268_AL_.jpg"></image>
+        <overview text = "Yearning to own a small patch of land and be more than a chicken sexer, the ambitious paterfamilias, Jacob Yi, relocates 
+        his Korean-American family, sceptical wife, Monica, and their children, David and Anne, from California to 1980s rural Arkansas, to start afresh and 
+        capture the elusive American Dream. However, new beginnings are always challenging, and to find out what is best for the family, let alone start a 
+        50-acre farm to grow and sell Korean fruits and vegetables, is easier said than done. But, amid sincere promises, cultural unease, fleeting hopes, 
+        and the ever-present threat of financial disaster, Jacob is convinced that he has found their own slice of Eden in the rich, dark soil of Arkansas. 
+        Can grandma Soon-ja's humble but resilient minari help the Yi family figure out their place in the world?">
+        </overview>
+    </movie>
+    <movie title ="Demon Slayer the Movie: Mugen Train" releaseDate = "2021-04-23" duration = "7020">
+        <genres>
+            <genre name = "Animation"></genre>
+            <genre name = "Action"></genre>
+            <genre name = "Adventure"></genre>
+        </genres>
+        <image path = "https://m.media-amazon.com/images/M/MV5BODI2NjdlYWItMTE1ZC00YzI2LTlhZGQtNzE3NzA4MWM0ODYzXkEyXkFqcGdeQXVyNjU1OTg4OTM@._V1_UX182_CR0,0,182,268_AL_.jpg"></image>
+        <overview text = "Tanjiro Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared 
+        boy who reveals his true power when he sleeps, board the Infinity Train on a new mission with the Flame Pillar, Kyojuro Rengoku, to defeat a 
+        demon who has been tormenting the people and killing the demon slayers who oppose it!">
         </overview>
     </movie>
 </movies>
