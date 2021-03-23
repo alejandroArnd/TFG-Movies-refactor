@@ -10,7 +10,7 @@ class ValidatorReviewService
 {
     public function validate($review)
     {
-        if(!is_numeric($review->score) || ($review->score < 0 && $review->score > 10) || !preg_match('/^\d*}*(\.[0-9]{1})?$/', $review->score)){
+        if(!is_numeric($review->score) || ($review->score < 0 && $review->score > 10) || !preg_match('/^\d*}*(\.[5]{1})?$/', $review->score)){
             throw new ScoreIsNotValidNumberException();
         }
 
