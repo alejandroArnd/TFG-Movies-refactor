@@ -56,20 +56,17 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
 
     public function findTopRatedMovies(): array
     {
-        $queryBuilder = $this->createQueryBuilder('m');
-        $movies = $queryBuilder
-            ->select('m', $queryBuilder->expr()->avg('review.score'))
-            ->innerJoin('m.reviews','review')
-            ->groupBy('m.id')
-            ->orderBy($queryBuilder->expr()->avg('review.score'), 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult();
+        $queryBuilderMovie = new QueryBuilderMovie();
+        $movies = $queryBuilderMovie->createQueryBuilderMovie($this)
+            ->addSelectAvgScoreMovie()
+            ->orderMoviesBy($queryBuilderMovie->getExprQuery()->avg('review.score'))
+            ->setMaxResultsQuery(10)
+            ->getResultOfQuery();
 
         $moviesModel=[];
 
         foreach($movies as $movie){
-            $moviesModel[] = (object)['movie' => $this->movieMapper->toModel($movie[0]), 'averageScore' => $movie[1]];
+            $moviesModel[] = (object)['movie' => $this->movieMapper->toModel($movie[0]), 'averageScore' => round($movie[1],1)];
         }
         return $moviesModel;
 
