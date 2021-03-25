@@ -292,4 +292,130 @@
         <paragraph text = "Not as good as the first one, however it still has a large amount of good moments. A fun over the top superhero movie that's filled 
         with pop culture references and self-referential humor. Very enjoyable especially the end credits scenes"></paragraph>
     </review>
+    <review title = "Good" score = "7" postingDate = "2020-06-09">
+        <movie title = "Deadpool 2"></movie>
+        <user username = "ruben"></user>
+        <paragraph text = "Good, but not as good as the first one. the new villain they introduced in this movie have made the movie less funny 
+        comparing it to the prequel."></paragraph>
+    </review>
+    <review title = "Successful Sequel" score = "6.5" postingDate = "2018-05-22">
+        <movie title = "Deadpool 2"></movie>
+        <user username = "brenes"></user>
+        <paragraph text = "Deadpool 2 masterfully pushes the wild humor and emotion to new heights, which sufficiently covers up narrative flaws and a 
+        misstepped social commentary. Compared to Deadpool, Deadpool 2 seems more comfortable handling the elements that made the original a success. 
+        The humor is bolder and more self-aware because the audience is already familiar with the characters. Ryan Reynolds masters the tricky balance 
+        between heavy emotion and outrageous wisecracks because the audience is trained to expect a joke for every heartfelt scene, and the movie gladly 
+        obliges. Every trick in the book is used to evoke emotional responses, but the winks to the audience make such manipulation acceptable, even welcome. 
+        For those worried that Deadpool 2 is more of the same, they needn't fret. The movie introduces a handful of new characters, each well-acted and funny in 
+        their own way. There are also some celebrity cameos sprinkled in. Sure, some of them are there solely to make a joke or two, but a couple of the new 
+        characters clearly places in future movies. Compared to some superhero movies, Deadpool 2 has a streamlined narrative and pulls off a highly successful 
+        third act. The climax of the movie not only avoids the Marvel &quot;villain problem,&quot; but it's also packed with great action, hilarious jokes, 
+        and solid character moments. This success overshadows some plot inconsistencies in the first and second act, which are minor but might bother some 
+        hypercritical audience members. Despite Deadpool 2's undeniable strengths, two features hold it back slightly. First, the subject of death is handled 
+        with such inconsistency that it seems jarring. One character's death is an unspeakable tragedy, while another's is just a comic bit. The movie missed an 
+        opportunity to make fun of the careless treatment of civilian deaths in comic-book movies, but instead fell into the trope. Deadpool 2 also tried to make a 
+        progressive commentary on diversity in superhero films, but its minority characters did not have particularly strong roles. Thus, this commentary seemed a 
+        bit undeserved and out-of-place. For fans of the original Deadpool, the sequel will not disappoint. The movie capitalizes on what it did well in the first 
+        movie and the result is a riotously entertaining, surprisingly emotional, and satisfying second installment."></paragraph>
+    </review>
+    <review title = "Not as good as the first" score = "6" postingDate = "2020-10-10">
+        <movie title = "Deadpool 2"></movie>
+        <user username = "sergio"></user>
+        <paragraph text = "Good, action, funny. But not as smart or funny as the first one. Whilst enjoyable I was ultimately a little disappointed. Expected too much 
+        after the brilliance of the first!"></paragraph>
+    </review>
+    <review title = "Joker's laughter is no joking matter" score = "9" postingDate = "2019-10-06">
+        <movie title = "Joker"></movie>
+        <user username = "brenes"></user>
+        <paragraph text = "Writer-director Todd Phillips's new movie &quot;Joker&quot; appeals to me on multiple levels, primarily by offering an engaging story, 
+        strongly rooted in believable reality, related to audiences mainly by opposing protagonist's prevalent dark depressive moods while using often optimistic 
+        soundtrack and sound editing, shallow nonetheless rich visuals, angles and framing, theatricality augmented through expressive costumes, props and sets, 
+        but most impressively via great principal performances and acting choices made by Joaquin Phoenix in the lead as a title character (under proper fictional 
+        name Arthur Fleck), whose sudden uncontrollable and seemingly inappropriate laughter (justified as a medical condition) easily counterpoints the (painful n
+        eed for) outcry from Gotham (read: any) City masses, hurt and deprived by injustices of their quotidian existence, as well as by Robert De Niro in a 
+        quintessential supporting role of a TV-comedy show host Murray Franklin (both worthy of the end-of-the-year acting award considerations), and by setting 
+        believable pre-course for the future adventures of the most realistic DC Comics character, the Batman (not a superhero at all, with his extraordinary 
+        capabilities rather resulting from his physical fitness and skills combined with high technology employed), who appears here only as a young boy, and 
+        whose later adult activities could be understood as largely driven by what has happened to his parents in the final scene of this movie, an event directly 
+        inspired by actions of Joker, henceforth his future main nemeses."></paragraph>
+    </review>
+    <review title = "Movie of the year" score = "8" postingDate = "2019-10-09">
+        <movie title = "Joker"></movie>
+        <user username = "alex"></user>
+        <paragraph text = "This movie shows the true origin of the joker that has never seen before in cinema. I went in expecting non-stop action. 
+        But I was wrong, it is more subtle and takes important aspects from the source material. JP's acting is incredible and the trans-formation from Arthur 
+        to the Joker is portrayed remarkably well. The laugh he makes added with a great selection of sound and style of the movie makes it that much creepier. 
+        You sort of feel sympathy for Arthur and what he's been through even though, he is committing terrible acts of violence. There is elements of dark comedy 
+        which blends well with his character. The plot is strong and the director has done a very good job. This stand-alone movie pays great tribute to previous 
+        installents and will be go down as one of the best DC movies ever made."></paragraph>
+    </review>
+    <review title = "Beautiful cinematography, slow and steady build up with intense character development" score = "8.5" postingDate = "2019-10-04">
+        <movie title = "Joker"></movie>
+        <user username = "sergio"></user>
+        <paragraph text = "Such a different kind of film it's hard to describe, but I'll try. Dark, twisted, humanly relatable, psychotic realism from 
+        the point of view of an impoverished society letting its citizens fall through the gaps. It's the perfect combination of uncomfortable, awkward, sad, 
+        and funny. I'm pretty sure I felt new untapped emotions without current names, like discovering a new species of animal. It's a work or art, not a super 
+        hero of anti-hero movie. Many will be disappointing, as a little of me was, but most of me was very very satisfied. Don't walk there with any expectations, 
+        just an open pallet and soak up the paint as it's brushed."></paragraph>
+    </review>
+    <review title = "A brilliant movie" score = "7.5" postingDate = "2019-10-04">
+        <movie title = "Joker"></movie>
+        <user username = "ruben"></user>
+        <paragraph text = "This movie is slow but never makes you feel bored. The story is narrated in a wonderful manner. This movie sets a good example for 
+        others comic based movies that how can a negative character can be portrayed in such a manner that you though know joker in not a good man but will be 
+        feeling bad for him at some point. The acting done by Joaquin Phoenix who played the role of joker was amazing. He was flawless and did proper justice 
+        with the character of joker which very few actors were able to do. Joaquin Phoenix is a brilliant method actor. This is a movie made to see in movie 
+        theatre not at tv or any streaming app."></paragraph>
+    </review>
+    <review title = "Seuqltitis" score = "3" postingDate = "2021-02-15">
+        <movie title = "Blade Runner 2049"></movie>
+        <user username = "sergio"></user>
+        <paragraph text = "As a big Blade Runner fan who loves to watch it over and over I was already on guard when they brought in the gang for a sequel. 
+        So many of the characters are either annoying or just dull and vapid. In other words, they are al phoning it in and inside know this is an embarrassment. 
+        This signifies the decline of humanity. The concept is the weakest in its illogic. I find myself getting annoyed to the point where I am starting to dislike 
+        the original if you can believe that."></paragraph>
+    </review>
+    <review title = "It Is Such An Interesting World" score = "5" postingDate = "2019-02-27">
+        <movie title = "Blade Runner 2049"></movie>
+        <user username = "brenes"></user>
+        <paragraph text = "There are so many tech gadgets, there are so many petty women and hot legs, there is a house wife who arranges a threesome for her man, 
+        one can own pets, there is free alcohol and so on and so forth... .... yet this movie is so boring and uninteresting. wow how can it be? It must be the nature 
+        of sequels."></paragraph>
+    </review>
+    <review title = "Boring" score = "0" postingDate = "2020-07-17">
+        <movie title = "Blade Runner 2049"></movie>
+        <user username = "ruben"></user>
+        <paragraph text = "Boring, get an editor, and also there is no conclusion. They clearly are planning on another sequel so nothing happens. 
+        The girlfriend was really pretty with eyes to die for and it was good to see she was not trashy and tattooed (yes I know hologram.. ironic) but 
+        literally no reason for this film to exist. I am really sad about the dog.. very sad."></paragraph>
+    </review>
+    <review title = "I am Korean and this movie is overrated." score = "6.5" postingDate = "2021-03-01">
+        <movie title = "Minari"></movie>
+        <user username = "sergio"></user>
+        <paragraph text = "I guess Korean and Asian movie is a thing now thanks to Bong Joon-Ho and Parasite. This movie isn't anywhere close to the level of 
+        Parasite. Just saying this so people would have lower expectation.\n The plot itself is something all immigrant can relate. 
+        But the actual execution of the movie... I don't know who it's being presented to. It's not American audience as it has very little 
+        they can relate and it's subtitled. At least not to mass audience. It's not for Koreans as the acting other than Youn Yeo-Jung are not convincing enough. 
+        In fact, Steven Yeon's accent is distinctively 2nd generation Korean. I thought someone of his acting pedigree should've trained harder to learn how 
+        the first generation Koreans speak. Hollywood actors do it all the time when they have to be Irish or Scottish or Australian, they train with speech 
+        trainer. And then the director can't tell the difference either as he is also 2nd generation Korean. Maybe this is presented to few film aficionados 
+        who are willing to read subtitles.\nAnd there's difference between open ended movie and movies that just leaves you hanging. This is the latter.\n The 
+        movie had potential to be much better. But in the end, falls short of what it could've been."></paragraph>
+    </review>
+    <review title = "Beautiful and Poignant " score = "9.5" postingDate = "2021-01-09">
+        <movie title = "Minari"></movie>
+        <user username = "alex"></user>
+        <paragraph text = "This movie once again proves that A24 is the most consistent studio in making great movies in Hollywood. Minari shows all ranges of 
+        emotion and one of the few films where kids act like kids, have a family that feels authentic, especially the grandma, superbly played by Youn Yuh-jung. 
+        It further depicts how the western way of living affects people who are not born in it. It's easily one of the best movies from 2020."></paragraph>
+    </review>
+    <review title = "Review of Minari" score = "8" postingDate = "2021-01-19">
+        <movie title = "Minari"></movie>
+        <user username = "brenes"></user>
+        <paragraph text = "Minari is a movie that deals with struggle of a Korean immigrant family to survive in USA. It's one of the good draman movies of 2020. 
+        Until I see this movie I didn't now about director Lee Isac Chung now I know that he is an son of immigrant family so may be the little boy represent the 
+        director of the movie who is also writer of the movie. Apart from Steven Yuen who plays father of family, I didn't see any other actors or actresses before 
+        but acting was very good. All the family performances were convincing so you can easily care for this family. I think it is one of the best drama movies of 
+        2020. Anyone who wants to see a drama movie, should see this movie."></paragraph>
+    </review>
 </reviews>
