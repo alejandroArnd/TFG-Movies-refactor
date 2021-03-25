@@ -3,6 +3,7 @@
 namespace App\Infrastrcture\Service;
 
 use Doctrine\ORM\QueryBuilder;
+use Doctrine\ORM\Query\Expr;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 
 class QueryBuilderMovie
@@ -11,7 +12,7 @@ class QueryBuilderMovie
     
     public function createQueryBuilderMovie($builder): self
     {
-        $this->queryBuilder = $builder->createQueryBuilder('m');
+        $this->queryBuilder = $builder->createQueryBuilder('m')->select('m');
 
         return $this;
     }
@@ -37,6 +38,27 @@ class QueryBuilderMovie
         return $this;
     }
 
+    public function addSelectAvgScoreMovie() :self
+    {
+        $this->queryBuilder = $this->queryBuilder->addSelect($this->queryBuilder->expr()->avg('review.score'))
+        ->innerJoin('m.reviews','review')
+        ->groupBy('m.id');
+
+        return $this;
+    }
+
+    public function orderMoviesBy($sort, $order = "DESC"): self
+    {
+        $this->queryBuilder = $this->queryBuilder->groupBy('m.id')->orderBy($sort, $order);
+
+        return $this;
+    }
+
+    public function getExprQuery(): Expr
+    {
+        return $this->queryBuilder->expr();
+    }
+
     public function getPaginateResultQuery(int $limitPerPage, int $page ): array
     {
         $paginator=new Paginator($this->queryBuilder);
@@ -50,5 +72,12 @@ class QueryBuilderMovie
     public function getResultOfQuery(): array
     {
         return $this->queryBuilder->getQuery()->getResult();
+    }
+
+    public function setMaxResultsQuery($maxResults): self
+    {
+        $this->queryBuilder = $this->queryBuilder->setMaxResults($maxResults);
+
+        return $this;
     }
 }
