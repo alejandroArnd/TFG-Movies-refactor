@@ -9,6 +9,7 @@ class GenreResponseDtoTransformer extends ResponseDtoTransformer
     public function transformFromObject($genre): GenreResponseDto
     {
         $dto = new GenreResponseDto();
+        $dto->setId($genre->getId());
         $dto->setName($genre->getName());
 
         return $dto;
