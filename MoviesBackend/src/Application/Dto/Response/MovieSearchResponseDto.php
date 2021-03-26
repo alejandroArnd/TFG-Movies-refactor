@@ -12,6 +12,9 @@ class MovieSearchResponseDto
 
     public float $avarageScore;
 
+    public string $releaseDate;
+
+    public array $genres;
 
     public function getId(): int
     {
@@ -51,5 +54,25 @@ class MovieSearchResponseDto
     public function setAvarageScore($avarageScore): void
     {
         $this->avarageScore = $avarageScore;
+    }
+
+    public function getReleaseDate(): string
+    {
+        return $this->releaseDate;
+    }
+
+    public function setReleaseDate($releaseDate): void
+    {
+        $this->releaseDate = $releaseDate;
+    }
+
+    public function getGenres(): array
+    {
+        return $this->genres;
+    }
+
+    public function setGenres($genres): void
+    {
+        $this->genres = $genres;
     }
 }
