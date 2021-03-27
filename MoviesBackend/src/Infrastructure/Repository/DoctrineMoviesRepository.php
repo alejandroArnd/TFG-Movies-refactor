@@ -63,13 +63,20 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
             ->setMaxResultsQuery(10)
             ->getResultOfQuery();
 
-        $moviesModel=[];
+        return $this->movieMapper->toArrayModelWithAvgScore($movies);
+    }
 
-        foreach($movies as $movie){
-            $moviesModel[] = (object)['movie' => $this->movieMapper->toModel($movie[0]), 'averageScore' => round($movie[1],1)];
-        }
-        return $moviesModel;
+    public function findComingSoonMovies(): array
+    {
+        $queryBuilderMovie = new QueryBuilderMovie();
+        $movies = $queryBuilderMovie->createQueryBuilderMovie($this)
+            ->addSelectAvgScoreMovie()
+            ->addSearchByReleaseDateGreaterThanActualDate()
+            ->orderMoviesBy('m.releaseDate', 'ASC')
+            ->setMaxResultsQuery(10)
+            ->getResultOfQuery();
 
+        return $this->movieMapper->toArrayModelWithAvgScore($movies);
     }
 
     private function update($movieModel)

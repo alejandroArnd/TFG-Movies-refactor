@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Application\UseCases\Movies\SoftDeleteMovie;
 use App\Application\UseCases\Movies\FindTopRatedMovies;
 use App\Application\UseCases\Movies\FindOneMovieByTitle;
+use App\Application\UseCases\Movies\FindComingSoonMovies;
 use App\Application\UseCases\Movies\FindMoviesBySeveralCriterias;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -26,6 +27,7 @@ class MoviesController extends AbstractController{
     private UpdateMovie $updateMovie;
     private FindOneMovieByTitle $findOneMoviesByTitle;
     private FindTopRatedMovies $findTopRatedMovies;
+    private FindComingSoonMovies $findComingSoonMovies;
 
     public function __construct(
         FindAllMovies $findAllMovies, 
@@ -35,7 +37,8 @@ class MoviesController extends AbstractController{
         FindOneMovieByTitle $findOneMoviesByTitle,
         UpdateMovie $updateMovie,
         ValidatorMovieService $validatorMovie,
-        FindTopRatedMovies $findTopRatedMovies
+        FindTopRatedMovies $findTopRatedMovies,
+        FindComingSoonMovies $findComingSoonMovies
     ){
         $this->findAllMovies = $findAllMovies;
         $this->createMovie = $createMovie;
@@ -45,6 +48,7 @@ class MoviesController extends AbstractController{
         $this->updateMovie = $updateMovie;
         $this->validatorMovie = $validatorMovie;
         $this->findTopRatedMovies = $findTopRatedMovies;
+        $this->findComingSoonMovies = $findComingSoonMovies;
     }
 
     /**
@@ -128,6 +132,15 @@ class MoviesController extends AbstractController{
     public function findTopRatedMovies (): JsonResponse
     {
         $movies = $this->findTopRatedMovies->handle();
+        return new JsonResponse($movies, JsonResponse::HTTP_OK);
+    }
+
+    /**
+     * @Route("/api/movies/coming/soon", methods={"GET"})
+     */
+    public function findComingSoonMovies(): JsonResponse
+    {
+        $movies = $this->findComingSoonMovies->handle();
         return new JsonResponse($movies, JsonResponse::HTTP_OK);
     }
     
