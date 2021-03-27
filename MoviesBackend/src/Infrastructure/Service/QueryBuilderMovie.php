@@ -2,8 +2,9 @@
 
 namespace App\Infrastrcture\Service;
 
-use Doctrine\ORM\QueryBuilder;
+use DateTime;
 use Doctrine\ORM\Query\Expr;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 
 class QueryBuilderMovie
@@ -38,10 +39,18 @@ class QueryBuilderMovie
         return $this;
     }
 
+    public function addSearchByReleaseDateGreaterThanActualDate(): self
+    {
+        $today = new DateTime();
+        $this->queryBuilder = $this->queryBuilder->andWhere($this->queryBuilder->expr()->gt('m.releaseDate', "'".$today->format('Y-m-d')."'"));
+
+        return $this;
+    }
+
     public function addSelectAvgScoreMovie() :self
     {
         $this->queryBuilder = $this->queryBuilder->addSelect($this->queryBuilder->expr()->avg('review.score'))
-        ->innerJoin('m.reviews','review')
+        ->leftJoin('m.reviews','review')
         ->groupBy('m.id');
 
         return $this;
