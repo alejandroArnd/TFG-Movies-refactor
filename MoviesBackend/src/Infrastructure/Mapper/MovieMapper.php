@@ -54,6 +54,17 @@ class MovieMapper extends AbstractDataMapper
         return $movieModel;
     }
 
+    public function toArrayModelWithAvgScore($movies): array
+    {
+        $moviesModel=[];
+
+        foreach($movies as $movie){
+            $moviesModel[] = (object)['movie' => $this->toModel($movie[0]), 'averageScore' => round($movie[1],1)];
+        }
+        return $moviesModel;
+
+    }
+
     public function toArrayEntityGenre(array $models): array
     {
         $entities = [];
