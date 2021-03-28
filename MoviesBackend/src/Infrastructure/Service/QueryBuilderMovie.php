@@ -63,6 +63,41 @@ class QueryBuilderMovie
         return $this;
     }
 
+    public function addSearchMostPopularMovies(int $partOfTotalView, $subBuilder): self
+    {
+        $todayDT = new DateTime();
+        $today = $todayDT->format('Y-m-d');
+        $lastYear = $this->getLastYear($today);
+        
+        $subQueryBuilder = $subBuilder->createQueryBuilder('msub');
+        $subQueryBuilder = $subQueryBuilder->select($subQueryBuilder->expr()->count('rsub.id'))
+            ->innerJoin('msub.reviews', 'rsub')
+            ->where(($subQueryBuilder->expr()->eq('msub.id', 'm.id')))
+            ->andWhere($subQueryBuilder->expr()->between(
+                'rsub.postingDate',
+                "'".$lastYear."'", 
+                "'".$today."'" )
+            );
+        
+        $this->queryBuilder = $this->queryBuilder->having(
+            $this->queryBuilder->expr()->lte(
+                    $this->queryBuilder->expr()->quot(
+                        $this->queryBuilder->expr()->count('review.id'), 
+                        $partOfTotalView
+                    ),
+                    "(".$subQueryBuilder.")"
+                )
+            )
+            ->andHaving(
+                $this->queryBuilder->expr()->gt(
+                    $this->queryBuilder->expr()->count('review.id'), 
+                    0
+                )
+            );
+
+        return $this;
+    }
+
     public function getExprQuery(): Expr
     {
         return $this->queryBuilder->expr();
@@ -88,5 +123,10 @@ class QueryBuilderMovie
         $this->queryBuilder = $this->queryBuilder->setMaxResults($maxResults);
 
         return $this;
+    }
+
+    private function getLastYear(string $today): string
+    {
+        return date("Y-m-d", strtotime("-1 year", strtotime($today)));
     }
 }

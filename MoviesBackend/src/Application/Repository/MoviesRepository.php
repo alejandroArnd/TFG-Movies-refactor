@@ -14,6 +14,8 @@ interface MoviesRepository
 
     public function findComingSoonMovies(): array;
 
+    public function findMostPopularMovies(): array;
+
     public function findById(int $id): ?MoviesModel;
 
     public function findOneByTitle(string $title): ?MoviesModel;

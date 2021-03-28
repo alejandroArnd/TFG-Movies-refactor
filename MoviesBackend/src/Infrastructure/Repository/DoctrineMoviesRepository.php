@@ -2,6 +2,8 @@
 
 namespace App\Infrastructure\Repository;
 
+use DateTime;
+use DateInterval;
 use App\Domain\Model\MoviesModel;
 use App\Infrastructure\Entity\Movies;
 use Doctrine\Persistence\ManagerRegistry;
@@ -77,6 +79,19 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
             ->getResultOfQuery();
 
         return $this->movieMapper->toArrayModelWithAvgScore($movies);
+    }
+
+    public function findMostPopularMovies(): array
+    {
+        $queryBuilderMovie = new QueryBuilderMovie();
+        $movies = $queryBuilderMovie->createQueryBuilderMovie($this)
+            ->addSelectAvgScoreMovie()
+            ->addSearchMostPopularMovies(3, $this)
+            ->orderMoviesBy($queryBuilderMovie->getExprQuery()->count('review.id'))
+            ->setMaxResultsQuery(10)
+            ->getResultOfQuery();
+
+        return $this->movieMapper->toArrayModelWithAvgScore($movies);   
     }
 
     private function update($movieModel)
