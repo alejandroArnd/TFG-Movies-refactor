@@ -1,6 +1,7 @@
 <div style="text-align: center;">
-<img src="https://i.ibb.co/mXtg6zq/output-onlinepngtools.png" alt="drawing" style="width: 320px; "/>
+<img src="https://i.ibb.co/mXtg6zq/output-onlinepngtools.png" alt="drawing" style="width: 100px; "/>
 </div>
+
 # TFG-Movies-refactor
 
 I created this web to people can make reviews about movies and give it a score, it is  like Imdb, filmaffinity etc. I decided to refactor my old code of my TFG.
@@ -8,7 +9,7 @@ I created this web to people can make reviews about movies and give it a score, 
 In the fronted i have used Angular 11.2 with TailwindCss.
 In the backend i have used Symfony 5 applaying a hexagonal archicteture.
 
-##The Best Movies
+## The Best Movies
 ### Instalation 🔧
 
  - First clone the repository
