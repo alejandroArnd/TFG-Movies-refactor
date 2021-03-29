@@ -31,3 +31,7 @@ docker-compose up
 ng serve --open
 ```
 **To se the frontend application: "http://localhost:4200"**
+
+# :scroll: License
+
+MIT © [Alejandro Aranda Gómez](https://www.linkedin.com/in/alejandro-aranda-g%C3%B3mez-b3286b162/)
