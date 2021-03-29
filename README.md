@@ -1,6 +1,6 @@
-<div style="text-align: center;">
-<img src="https://i.ibb.co/mXtg6zq/output-onlinepngtools.png" alt="drawing" style="width: 100px; "/>
-</div>
+<p align="center">
+    <img src="https://i.ibb.co/mXtg6zq/output-onlinepngtools.png"  alt="drawing" width = "400"/>
+</p>
 
 # TFG-Movies-refactor
 
