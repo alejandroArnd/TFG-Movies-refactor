@@ -16,4 +16,14 @@ export class MovieService {
     return this.httpClient
       .get<MovieCard[]>(environment.REST_API_SERVER + environment.TOP_RATED_MOVIES);
   }
+
+  public getComingSoonMovies(): Observable<MovieCard[]>{
+    return this.httpClient
+      .get<MovieCard[]>(environment.REST_API_SERVER + environment.COMING_SOON_MOVIES);
+  }
+
+  public getMostPopularMovies(): Observable<MovieCard[]>{
+    return this.httpClient
+      .get<MovieCard[]>(environment.REST_API_SERVER + environment.MOST_POPULAR_MOVIES);
+  }
 }
