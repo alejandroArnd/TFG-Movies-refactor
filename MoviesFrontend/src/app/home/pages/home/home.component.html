@@ -1,0 +1,26 @@
+<div class="container mx-auto px-4 pt-16">
+    <div class="top-rated-movies mt-9">
+        <h2 class="uppercase text-lg font-semibold">Top Rated Movies</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            <div class="mt-6 w-10/12 mb-6" *ngFor="let movie of this.moviesTopRated$;">
+                <movie-card [movie] = movie ></movie-card>
+            </div>
+        </div>
+    </div> 
+    <div class="coming-soon-movies mt-40">
+        <h2 class="uppercase text-lg font-semibold">Coming Soon Movies</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            <div class="mt-6 w-10/12 mb-6" *ngFor="let movie of this.moviesComingSoon$;">
+                <movie-card [movie] = movie ></movie-card>
+            </div>
+        </div>
+    </div>
+    <div class="most-popular-movies mt-40">
+        <h2 class="uppercase text-lg font-semibold">Most Popular Movies</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            <div class="mt-6 w-10/12 mb-6" *ngFor="let movie of this.moviesMostPopular$;">
+                <movie-card [movie] = movie ></movie-card>
+            </div>
+        </div>
+    </div>  
+</div>
