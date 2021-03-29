@@ -25,6 +25,12 @@ docker-compose up
 ```
 **To do an http requests to the backend: "http://localhost:9090"**
 
+- Install dependency of the frontend with this command:
+
+```
+npm i
+```
+
 - To start up the frontend go MoviesFrontend and run this command:
 
 ```
