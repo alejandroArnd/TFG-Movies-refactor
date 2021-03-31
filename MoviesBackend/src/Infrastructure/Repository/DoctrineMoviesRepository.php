@@ -50,9 +50,10 @@ class DoctrineMoviesRepository extends ServiceEntityRepository implements Movies
         $queryBuilderMovie = new QueryBuilderMovie();
         [$movies, $totalItems] = $queryBuilderMovie->createQueryBuilderMovie($this)
             ->addSearchByTitle($criteriaParams->title)
+            ->addSelectAvgScoreMovie()
             ->addSearchByGenres($criteriaParams)
-            ->getPaginateResultQuery(2,$criteriaParams->page);
-        $searchResponse = (object) ['movies' => $this->movieMapper->toArrayModel($movies), 'totalItems' => $totalItems];
+            ->getPaginateResultQuery(20,$criteriaParams->page);
+        $searchResponse = (object) ['movies' => $this->movieMapper->toArrayModelWithAvgScore($movies), 'totalItems' => $totalItems];
         return $searchResponse;
     }
 
