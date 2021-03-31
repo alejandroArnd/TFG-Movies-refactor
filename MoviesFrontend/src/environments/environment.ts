@@ -7,7 +7,8 @@ export const environment = {
   REST_API_SERVER: 'http://localhost:9090/api/',
   TOP_RATED_MOVIES: 'movies/top/rated',
   COMING_SOON_MOVIES: 'movies/coming/soon',
-  MOST_POPULAR_MOVIES: 'movies/most/popular'
+  MOST_POPULAR_MOVIES: 'movies/most/popular',
+  SEARCH_MOVIES: 'movies/search'
 };
 
 /*
