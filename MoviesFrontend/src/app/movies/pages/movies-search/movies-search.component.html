@@ -1,4 +1,7 @@
 <div class="container mx-auto px-4 pt-16">
+    <div class="mt-12 flex flex-col justify-items-center mx-auto w-7/12">
+       <advanced-search></advanced-search>
+    </div>
     <div class="mt-9" *ngIf="!this.moviesLoading">
         <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
             <div class="mt-6 w-10/12 mb-6" *ngFor="let movie of this.movies$ | paginate: {
@@ -23,7 +26,7 @@
             <h2 class="text-4xl font-bold">No hay elementos</h2>
         </div>
     </div>
-    <div *ngIf="this.moviesLoading" class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden flex flex-col items-center justify-center">
+    <div *ngIf="this.moviesLoading" class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen  flex flex-col items-center justify-center">
         <div class="loader ease-linear rounded-full border-8 border-t-9 border-gray-300 h-32 w-32 mb-4"></div>
         <h2 class="text-center text-black text-xl font-semibold">Loading...</h2>
     </div>

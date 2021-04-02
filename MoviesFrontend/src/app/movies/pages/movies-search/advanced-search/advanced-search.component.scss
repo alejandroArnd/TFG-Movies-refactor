@@ -1,0 +1,14 @@
+#menu-toggle {
+    display: none;
+  }
+  
+  #collapse-menu {
+    max-height: 0px;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+  }
+  
+  input:not(:checked) ~ #collapse-menu {
+    max-height: 500px;
+    transition: max-height 0.55s ease-in;
+  }
