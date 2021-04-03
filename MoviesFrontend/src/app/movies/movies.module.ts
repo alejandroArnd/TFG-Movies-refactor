@@ -3,7 +3,8 @@ import { SharedModule } from '../shared/shared.module';
 import { MoviesRoutingModule } from './movies-routing.module';
 import { MoviesSearchComponent } from './pages/movies-search/movies-search.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { AdvancedSearchComponent } from './pages/movies-search/advanced-search/advanced-search.component'
+import { AdvancedSearchComponent } from './pages/movies-search/advanced-search/advanced-search.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const COMPONENTS = [MoviesSearchComponent, AdvancedSearchComponent]
 
@@ -12,7 +13,9 @@ const COMPONENTS = [MoviesSearchComponent, AdvancedSearchComponent]
   imports: [
     SharedModule,
     MoviesRoutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   exports: COMPONENTS
 })

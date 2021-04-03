@@ -9,59 +9,24 @@
 </label>
     <div id="collapse-menu" class="bg-gray-200 overflow-hidden shadow-sm w-full">
         <div class="p-6 bg-white border-b bg-gray-200 border-gray-200 w-10/12 m-auto">
-            <form>
+            <form [formGroup]="form">
                 <div class="mb-4">
                     <label class="text-xl text-gray-600 pr-4">Title</label>
-                    <input type="text" class="border-2 border-gray-300 p-2 w-8/12 rounded " name="title" id="title" value="">
+                    <input type="text" class="border-2 border-gray-300 p-2 w-8/12 rounded " formControlName="title" name="title" id="title" value="">
                 </div>
                 <div>
                     <div>
                         <p class="text-xl text-gray-600 pr-4">Genres</p>
                     </div>
                     <div class="grid grid-cols-5 justify-items-start">
-                        <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox rounded h-5 w-5 text-gray-800" checked><span class="ml-2 text-gray-700">Action</span>
-                        </label>
-        
-                        <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox h-5 w-5 text-red-600" checked><span class="ml-2 text-gray-700">Adventure</span>
-                        </label>
-        
-                        <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox h-5 w-5 text-orange-600" checked><span class="ml-2 text-gray-700">Animation</span>
-                        </label>
-        
-                       <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox h-5 w-5 text-yellow-500" checked><span class="ml-2 text-gray-700">Biography</span>
-                       </label>
-        
-                        <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" checked><span class="ml-2 text-gray-700">Comedy</span>
-                        </label>
-        
-                        <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox h-5 w-5 text-teal-600" checked><span class="ml-2 text-gray-700">Crime</span>
-                        </label>
-        
-                        <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" checked><span class="ml-2 text-gray-700">Documentary</span>
-                        </label>
-        
-                        <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600" checked><span class="ml-2 text-gray-700">Drama</span>
-                        </label>
-        
-                        <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox h-5 w-5 text-purple-600" checked><span class="ml-2 text-gray-700">Family</span>
-                        </label>
-        
-                        <label class="inline-flex items-center mt-3">
-                           <input type="checkbox" class="form-checkbox h-5 w-5 text-pink-600" checked><span class="ml-2 text-gray-700">Experimental</span>
+                        <label class="inline-flex items-center mt-3" *ngFor="let genre of this.genres;">
+                            <input type="checkbox" class="form-checkbox rounded h-5 w-5 text-gray-800" [checked]="genre.isSelected" [value]="genre.value" (change)="onCheckboxChange($event)">
+                            <span class="ml-2 text-gray-700">{{genre.name}}</span>
                         </label>
                     </div>
                 </div>
-                <div class="flex p-1">
-                    <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+                <div class="flex p-1 mt-5">
+                    <button role="submit" class="p-3 bg-gray-800 rounded text-white hover:bg-gray-700" (click)="onAdvancedSearch()">Search</button>
                 </div>
             </form>
         </div>
