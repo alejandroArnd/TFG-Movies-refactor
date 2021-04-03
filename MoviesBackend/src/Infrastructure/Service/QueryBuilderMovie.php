@@ -28,7 +28,7 @@ class QueryBuilderMovie
 
     public function addSearchByGenres($criteriaParams): self
     {
-        if(!empty($criteriaParams->genres)){
+        if(!empty($criteriaParams->genres)&& !in_array("", $criteriaParams->genres)){
             $this->queryBuilder = $this->queryBuilder->innerJoin('m.genres','genre')
                     ->andWhere($this->queryBuilder->expr()->in('genre.name',$criteriaParams->genres))
                     ->groupBy('m.id, m.title, m.overview, m.accessiblePath, m.releaseDate')
