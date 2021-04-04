@@ -110,8 +110,13 @@ class MoviesController extends AbstractController{
      */
     public function findOneMovieByTitle (string $title): JsonResponse
     {
-        $movies = $this->findOneMoviesByTitle->handle($title);
-        return new JsonResponse($movies, JsonResponse::HTTP_OK);
+        try{
+            $movies = $this->findOneMoviesByTitle->handle($title);
+            return new JsonResponse($movies, JsonResponse::HTTP_OK);
+        }catch(Exception $exception){
+            $messageError = ['message' => $exception->getMessage(), 'status' => $exception->getCode()];
+            return new JsonResponse($messageError, $exception->getCode());
+        }
     }
 
      /**
