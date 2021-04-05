@@ -20,7 +20,7 @@ class MovieSearchResponseDtoTransformer extends ResponseDtoTransformer
         $dto->setId($movie->movie->getId());
         $dto->setTitle($movie->movie->getTitle());
         $dto->setAccessiblePath($movie->movie->getAccessiblePath());
-        $dto->setAvarageScore($movie->averageScore);
+        $dto->setAverageScore($movie->averageScore);
         $dto->setReleaseDate($movie->movie->getReleaseDate()->format('d-m-Y'));
         $dto->setGenres($this->genreResponseDtoTransformer->transformFromObjects($movie->movie->getGenres()));
 

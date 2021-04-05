@@ -10,7 +10,7 @@ class MovieSearchResponseDto
 
     public string $accessiblePath;
 
-    public float $avarageScore;
+    public float $averageScore;
 
     public string $releaseDate;
 
@@ -46,14 +46,14 @@ class MovieSearchResponseDto
         $this->accessiblePath = $accessiblePath;
     }
 
-    public function getAvarageScore(): float
+    public function getAverageScore(): float
     {
-        return $this->avarageScore;
+        return $this->averageScore;
     }
 
-    public function setAvarageScore($avarageScore): void
+    public function setAverageScore($averageScore): void
     {
-        $this->avarageScore = $avarageScore;
+        $this->averageScore = $averageScore;
     }
 
     public function getReleaseDate(): string
