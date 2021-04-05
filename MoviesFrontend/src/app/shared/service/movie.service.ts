@@ -5,6 +5,7 @@ import { environment } from '../../../environments/environment';
 import { map } from 'rxjs/operators';
 import { MovieCard } from '../interfaces/movie-card.interface';
 import { MoviesPaginated } from '../interfaces/movies-paginated.interface';
+import { Movie } from '../interfaces/movie.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,10 @@ export class MovieService {
     }
     return this.httpClient
       .get<MoviesPaginated>(environment.REST_API_SERVER + environment.SEARCH_MOVIES, { params: params });
+  }
+
+  public getMovieByTitle(title: string): Observable<Movie>{
+    return this.httpClient
+      .get<Movie>(environment.REST_API_SERVER + 'movies/' + title);
   }
 }
