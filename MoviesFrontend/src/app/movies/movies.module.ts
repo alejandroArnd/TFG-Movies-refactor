@@ -5,11 +5,14 @@ import { MoviesSearchComponent } from './pages/movies-search/movies-search.compo
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AdvancedSearchComponent } from './pages/movies-search/advanced-search/advanced-search.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MovieComponent } from './pages/movie/movie.component';
+import { MoviesDurationPipe } from './pipes/movies-duration.pipe';
 
-const COMPONENTS = [MoviesSearchComponent, AdvancedSearchComponent]
+const COMPONENTS = [MoviesSearchComponent, AdvancedSearchComponent, MovieComponent]
+const PIPES = [MoviesDurationPipe];
 
 @NgModule({
-  declarations: COMPONENTS,
+  declarations: [...COMPONENTS, ...PIPES], 
   imports: [
     SharedModule,
     MoviesRoutingModule,
