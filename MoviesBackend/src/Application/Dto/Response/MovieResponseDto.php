@@ -20,7 +20,9 @@ class MovieResponseDto
 
     public array $genres;
 
-    public array $reviews;
+    public int $countReviews;
+
+    public float $averageScore;
 
     public function getId(): int
     {
@@ -84,22 +86,22 @@ class MovieResponseDto
 
     public function getGenres(): array
     {
-        return $this->genre;
+        return $this->genres;
     }
 
-    public function setGenres($genre): void
+    public function setGenres($genres): void
     {
-        $this->genre = $genre;
+        $this->genres = $genres;
     }
 
-    public function getReviews(): array
+    public function getCountReviews(): int
     {
-        return $this->reviews;
+        return $this->countReviews;
     }
 
-    public function setReviews($reviews): void
+    public function setCountReviews($countReviews): void
     {
-        $this->reviews = $reviews;
+        $this->countReviews = $countReviews;
     }
 
     public function getAccessiblePath(): string
@@ -110,5 +112,15 @@ class MovieResponseDto
     public function setAccessiblePath($accessiblePath): void
     {
         $this->accessiblePath = $accessiblePath;
+    }
+
+    public function getAverageScore(): float
+    {
+        return $this->averageScore;
+    }
+
+    public function setAverageScore($averageScore): void
+    {
+        $this->averageScore = $averageScore;
     }
 }

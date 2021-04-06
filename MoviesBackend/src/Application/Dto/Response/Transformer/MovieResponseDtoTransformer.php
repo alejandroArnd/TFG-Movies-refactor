@@ -7,14 +7,9 @@ use App\Application\Dto\Response\MovieResponseDto;
 class MovieResponseDtoTransformer extends ResponseDtoTransformer
 {
     private GenreResponseDtoTransformer $genreResponseDtoTransformer;
-    private ReviewResponseDtoTransformer $reviewResponseDtoTransformer;
 
-    public function __construct(
-        GenreResponseDtoTransformer $genreResponseDtoTransformer,
-        ReviewResponseDtoTransformer $reviewResponseDtoTransformer
-    ) {
+    public function __construct(GenreResponseDtoTransformer $genreResponseDtoTransformer) {
         $this->genreResponseDtoTransformer = $genreResponseDtoTransformer;
-        $this->reviewResponseDtoTransformer = $reviewResponseDtoTransformer;
     }
 
     public function transformFromObject($movie): MovieResponseDto
@@ -28,8 +23,20 @@ class MovieResponseDtoTransformer extends ResponseDtoTransformer
         $dto->setIsDeleted($movie->getIsDeleted());
         $dto->setAccessiblePath($movie->getAccessiblePath());
         $dto->setGenres($this->genreResponseDtoTransformer->transformFromObjects($movie->getGenres()));
-        $dto->setReviews($this->reviewResponseDtoTransformer->transformFromObjects($movie->getReviews()));
+        $dto->setCountReviews(count($movie->getReviews()));
+        $dto->setAverageScore($this->calculateAverageScore($movie->getReviews()));
 
         return $dto;
+    }
+
+    private function calculateAverageScore(array $reviews): float
+    {
+        $averageScore = 0;
+
+        foreach($reviews as $review){
+            $averageScore += $review->getScore();
+        }
+        $averageScore = empty($averageScore) ? 0 : round($averageScore / count($reviews), 1);
+        return $averageScore;
     }
 }
