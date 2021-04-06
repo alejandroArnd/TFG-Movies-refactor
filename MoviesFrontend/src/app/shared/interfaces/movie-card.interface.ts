@@ -4,7 +4,7 @@ export interface MovieCard{
     id: number;
     title: string;
     accessiblePath: string;
-    avarageScore: number;
+    averageScore: number;
     releaseDate: string;
     genres: Genre[];
 }
