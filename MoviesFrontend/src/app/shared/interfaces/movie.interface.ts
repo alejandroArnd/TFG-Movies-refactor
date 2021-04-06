@@ -7,5 +7,7 @@ export interface Movie {
     duration: number,
     overview: string,
     releaseDate: string,
+    countReviews: number,
+    averageScore: number,
     accessiblePath: string
 }
