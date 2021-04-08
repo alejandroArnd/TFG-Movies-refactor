@@ -2,9 +2,9 @@
     <div class="mt-12 flex flex-col justify-center justify-self-start mx-80 w-3/6">
        <advanced-search></advanced-search>
     </div>
-    <div class="mt-32 flex flex-col items-center" *ngIf="!this.moviesLoading">
+    <div class="mt-32 items-center" *ngIf="!this.moviesLoading">
         <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            <div class="mt-6 w-10/12 mb-6 col-auto" *ngFor="let movie of this.movies$ | paginate: {
+            <div class="mt-6 w-10/12 mb-6" *ngFor="let movie of this.movies$ | paginate: {
                 currentPage: this.currentPage,
                 itemsPerPage: 20,
                 totalItems: this.totalItems  
@@ -12,7 +12,7 @@
                 <movie-card [movie] = movie></movie-card>
             </div>
         </div>
-        <div class="mt-24">
+        <div class="mt-24 flex flex-col items-center">
             <pagination-controls  responsive="true"  (pageChange)="pageChange($event)" class="my-pagination"></pagination-controls>
         </div>
     </div>
