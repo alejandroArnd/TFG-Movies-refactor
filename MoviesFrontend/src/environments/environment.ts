@@ -8,7 +8,8 @@ export const environment = {
   TOP_RATED_MOVIES: 'movies/top/rated',
   COMING_SOON_MOVIES: 'movies/coming/soon',
   MOST_POPULAR_MOVIES: 'movies/most/popular',
-  SEARCH_MOVIES: 'movies/search'
+  SEARCH_MOVIES: 'movies/search',
+  REGISTER: 'register'
 };
 
 /*
