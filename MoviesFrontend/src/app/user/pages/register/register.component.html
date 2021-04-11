@@ -1,0 +1,45 @@
+<div class="bg-grey-lighter min-h-screen w-4/12 mx-auto mt-44">
+    <div class="container mx-auto items-center justify-center px-2">
+        <form class="bg-white px-6 py-8 rounded shadow-xl text-black w-full" [formGroup]="registerForm">
+            <h1 class="mb-8 text-3xl text-center">Sign up</h1>
+            <input 
+                type="text"
+                class="block border border-grey-light w-full p-3 rounded mb-4 focus: box-shadow-none focus:ring-2"
+                placeholder="Username"
+                formControlName="username"
+                [ngClass]="{'border-red-500 ring-0 focus:ring-red-500 focus:border-red-500 ': registerForm.controls['username'].invalid && (registerForm.controls['username'].dirty || registerForm.controls['username'].touched)}"
+                 />
+            <div class = "-mt-3 mb-3 text-red-500 text-md" *ngIf="registerForm.controls['username'].invalid && (registerForm.controls['username'].dirty || registerForm.controls['username'].touched)">
+                <div *ngIf="registerForm.controls['username'].errors.required">
+                    Please enter username
+                </div>
+            </div>
+            <input 
+                type="text"
+                class="block border border-grey-light w-full p-3 rounded mb-4"
+                name="email"
+                placeholder="Email" 
+                formControlName="email"/>
+
+            <input 
+                type="password"
+                class="block border border-grey-light w-full p-3 rounded mb-4"
+                name="password"
+                placeholder="Password" 
+                formControlName="password"/>
+            <input 
+                type="password"
+                class="block border border-grey-light w-full p-3 rounded mb-4"
+                name="confirm_password"
+                placeholder="Confirm Password" />
+
+            <button (click) ="onSubmit()" type="button" class="w-full text-center py-3 rounded bg-blue-100 text-white hover:bg-blue-100 focus:outline-none my-1">Create Account</button>
+            <div class="text-center text-sm text-grey-dark mt-4">
+                Already have an account?
+                <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                    Log in
+                </a> 
+            </div>
+        </form>
+    </div>
+</div>
