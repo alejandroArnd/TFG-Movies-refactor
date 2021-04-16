@@ -9,7 +9,8 @@ export const environment = {
   COMING_SOON_MOVIES: 'movies/coming/soon',
   MOST_POPULAR_MOVIES: 'movies/most/popular',
   SEARCH_MOVIES: 'movies/search',
-  REGISTER: 'register'
+  REGISTER: 'register',
+  LOGIN: 'login'
 };
 
 /*
