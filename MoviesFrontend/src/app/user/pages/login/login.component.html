@@ -2,6 +2,9 @@
     <div class="container mx-auto items-center justify-center px-2">
         <form class="bg-white px-6 py-8 rounded shadow-xl text-black w-full" [formGroup]="loginForm">
             <h1 class="mb-8 text-3xl text-center">Sign in</h1>
+            <div *ngIf="loginFail" class="mx-auto flex flex-col border-red items-center p-3 mb-3 rounded-lg bg-red-200">
+                <p class="text-red-600">Incorrect username or password</p>
+            </div>
             <input 
                 type="text"
                 class="block border border-grey-light w-full p-3 rounded mb-4 focus: box-shadow-none"
